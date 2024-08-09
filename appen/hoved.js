@@ -92,8 +92,7 @@ function sjekkEtterKjeks() {
     //  }
     //}
     //return "";  
-    peng = 10;
-    spelaNiva = 0;
+    //spelaNiva = 0;
 }
 function lagreKjeks(niva, peng) {
     document.cookie = "KanalAS:" + niva + ":" + peng + ";" + "expires=Thu, 18 Dec 2033 12:00:00 UTC;path=/";
