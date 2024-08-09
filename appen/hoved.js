@@ -58,7 +58,7 @@ const ruteTypar = {
         farge: 'grey'
     }
 };
-let spelaNiva = 0;
+let spelaNiva = 2;
 let peng = 0;
 let ruter = {};
 let ruteListe = [];
