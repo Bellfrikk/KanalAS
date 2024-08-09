@@ -1,5 +1,5 @@
 "use strict";
-const maksNiva = 1;
+const maksNiva = 2;
 const brettData = {
     0: { startePeng: 7,
         X0Y0: 'start', X1Y0: 'vatn', X2Y0: 'land', X3Y0: 'land', X4Y0: 'land', X5Y0: 'land', X6Y0: 'land', X7Y0: 'vatn',
