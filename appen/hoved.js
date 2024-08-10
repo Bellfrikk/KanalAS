@@ -1,5 +1,5 @@
 "use strict";
-const maksNiva = 2;
+const maksNiva = 1;
 const brettData = {
     0: { startePeng: 7,
         X0Y0: 'start', X1Y0: 'vatn', X2Y0: 'land', X3Y0: 'land', X4Y0: 'land', X5Y0: 'land', X6Y0: 'land', X7Y0: 'vatn',
@@ -20,17 +20,7 @@ const brettData = {
         X0Y5: 'vatn', X1Y5: 'vatn', X2Y5: 'fjell', X3Y5: 'land', X4Y5: 'vatn', X5Y5: 'land', X6Y5: 'vatn', X7Y5: 'vatn',
         X0Y6: 'vatn', X1Y6: 'land', X2Y6: 'fjell', X3Y6: 'land', X4Y6: 'land', X5Y6: 'vatn', X6Y6: 'vatn', X7Y6: 'vatn',
         X0Y7: 'vatn', X1Y7: 'land', X2Y7: 'fjell', X3Y7: 'land', X4Y7: 'land', X5Y7: 'land', X6Y7: 'vatn', X7Y7: 'stopp'
-    },
-    2: { startePeng: 11,
-      X0Y0: 'start', X1Y0: 'vatn', X2Y0: 'land', X3Y0: 'fjell', X4Y0: 'land', X5Y0: 'land', X6Y0: 'land', X7Y0: 'vatn',
-      X0Y1: 'vatn', X1Y1: 'vatn', X2Y1: 'land', X3Y1: 'land', X4Y1: 'fjell', X5Y1: 'land', X6Y1: 'vatn', X7Y1: 'vatn',
-      X0Y2: 'vatn', X1Y2: 'vatn', X2Y2: 'land', X3Y2: 'vatn', X4Y2: 'fjell', X5Y2: 'vatn', X6Y2: 'vatn', X7Y2: 'vatn',
-      X0Y3: 'vatn', X1Y3: 'vatn', X2Y3: 'fjell', X3Y3: 'land', X4Y3: 'fjell', X5Y3: 'land', X6Y3: 'vatn', X7Y3: 'vatn',
-      X0Y4: 'vatn', X1Y4: 'vatn', X2Y4: 'fjell', X3Y4: 'land', X4Y4: 'vatn', X5Y4: 'land', X6Y4: 'vatn', X7Y4: 'vatn',
-      X0Y5: 'vatn', X1Y5: 'vatn', X2Y5: 'fjell', X3Y5: 'fjell', X4Y5: 'vatn', X5Y5: 'land', X6Y5: 'vatn', X7Y5: 'vatn',
-      X0Y6: 'vatn', X1Y6: 'land', X2Y6: 'fjell', X3Y6: 'land', X4Y6: 'fjell', X5Y6: 'vatn', X6Y6: 'vatn', X7Y6: 'vatn',
-      X0Y7: 'vatn', X1Y7: 'land', X2Y7: 'fjell', X3Y7: 'land', X4Y7: 'land', X5Y7: 'land', X6Y7: 'vatn', X7Y7: 'stopp'
-  }
+    }
 };
 const ruteTypar = {
     start: {
@@ -58,7 +48,7 @@ const ruteTypar = {
         farge: 'grey'
     }
 };
-let spelaNiva = 2;
+let spelaNiva = 0;
 let peng = 0;
 let ruter = {};
 let ruteListe = [];
@@ -92,7 +82,8 @@ function sjekkEtterKjeks() {
     //  }
     //}
     //return "";  
-    //spelaNiva = 0;
+    peng = 10;
+    spelaNiva = 0;
 }
 function lagreKjeks(niva, peng) {
     document.cookie = "KanalAS:" + niva + ":" + peng + ";" + "expires=Thu, 18 Dec 2033 12:00:00 UTC;path=/";
