@@ -21,7 +21,7 @@ const brettData = {
         X0Y6: 'vatn', X1Y6: 'land', X2Y6: 'fjell', X3Y6: 'land', X4Y6: 'land', X5Y6: 'vatn', X6Y6: 'vatn', X7Y6: 'vatn',
         X0Y7: 'vatn', X1Y7: 'land', X2Y7: 'fjell', X3Y7: 'land', X4Y7: 'land', X5Y7: 'land', X6Y7: 'vatn', X7Y7: 'stopp'
     },
-    1: { startePeng: 9,
+    2: { startePeng: 9,
       X0Y0: 'start', X1Y0: 'vatn', X2Y0: 'land', X3Y0: 'fjell', X4Y0: 'land', X5Y0: 'land', X6Y0: 'land', X7Y0: 'vatn',
       X0Y1: 'vatn', X1Y1: 'vatn', X2Y1: 'land', X3Y1: 'land', X4Y1: 'fjell', X5Y1: 'land', X6Y1: 'vatn', X7Y1: 'vatn',
       X0Y2: 'vatn', X1Y2: 'vatn', X2Y2: 'land', X3Y2: 'vatn', X4Y2: 'fjell', X5Y2: 'vatn', X6Y2: 'vatn', X7Y2: 'vatn',
