@@ -1,8 +1,9 @@
 "use strict";
 class Rute {
-    constructor(x, y, type) {
+    constructor(x, y, niva, type) {
         this.x = x;
         this.y = y;
+        this.niva = niva;
         this.type = type;
     }
 }

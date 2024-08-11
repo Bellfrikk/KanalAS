@@ -1,60 +1,44 @@
 const maksNiva = 1;
-const brettData:BrettData = {
-  0:{startePeng:7,
-    X0Y0:'start',X1Y0:'vatn', X2Y0:'land', X3Y0:'land', X4Y0:'land', X5Y0:'land', X6Y0:'land', X7Y0:'vatn',  
-    X0Y1:'vatn', X1Y1:'vatn', X2Y1:'land', X3Y1:'land', X4Y1:'land', X5Y1:'land', X6Y1:'vatn', X7Y1:'vatn',  
-    X0Y2:'vatn', X1Y2:'vatn', X2Y2:'land', X3Y2:'land', X4Y2:'land', X5Y2:'land', X6Y2:'vatn', X7Y2:'vatn',  
-    X0Y3:'vatn', X1Y3:'vatn', X2Y3:'land', X3Y3:'land', X4Y3:'land', X5Y3:'land', X6Y3:'vatn', X7Y3:'vatn',  
-    X0Y4:'vatn', X1Y4:'vatn', X2Y4:'land', X3Y4:'land', X4Y4:'land', X5Y4:'land', X6Y4:'vatn', X7Y4:'vatn',  
-    X0Y5:'vatn', X1Y5:'vatn', X2Y5:'land', X3Y5:'land', X4Y5:'land', X5Y5:'land', X6Y5:'vatn', X7Y5:'vatn',  
-    X0Y6:'vatn', X1Y6:'land', X2Y6:'land', X3Y6:'land', X4Y6:'land', X5Y6:'land', X6Y6:'vatn', X7Y6:'vatn',  
-    X0Y7:'vatn', X1Y7:'land', X2Y7:'land', X3Y7:'land', X4Y7:'land', X5Y7:'land', X6Y7:'vatn', X7Y7:'stopp'
+const brettData = {
+  0: { startePeng: 7,
+      X0Y0: [1,'start'],X1Y0: [1,'vatn'], X2Y0: [1,'land'], X3Y0: [1,'land'], X4Y0: [1,'land'], X5Y0: [1,'land'], X6Y0: [1,'land'], X7Y0: [1,'vatn'],
+      X0Y1: [1,'vatn'], X1Y1: [1,'vatn'], X2Y1: [1,'land'], X3Y1: [1,'land'], X4Y1: [1,'land'], X5Y1: [1,'land'], X6Y1: [1,'vatn'], X7Y1: [1,'vatn'],
+      X0Y2: [1,'vatn'], X1Y2: [1,'vatn'], X2Y2: [1,'land'], X3Y2: [1,'land'], X4Y2: [1,'land'], X5Y2: [1,'land'], X6Y2: [1,'vatn'], X7Y2: [1,'vatn'],
+      X0Y3: [1,'vatn'], X1Y3: [1,'vatn'], X2Y3: [1,'land'], X3Y3: [1,'land'], X4Y3: [1,'land'], X5Y3: [1,'land'], X6Y3: [1,'vatn'], X7Y3: [1,'vatn'],
+      X0Y4: [1,'vatn'], X1Y4: [1,'vatn'], X2Y4: [1,'land'], X3Y4: [1,'land'], X4Y4: [1,'land'], X5Y4: [1,'land'], X6Y4: [1,'vatn'], X7Y4: [1,'vatn'],
+      X0Y5: [1,'vatn'], X1Y5: [1,'vatn'], X2Y5: [1,'land'], X3Y5: [1,'land'], X4Y5: [1,'land'], X5Y5: [1,'land'], X6Y5: [1,'vatn'], X7Y5: [1,'vatn'],
+      X0Y6: [1,'vatn'], X1Y6: [1,'land'], X2Y6: [1,'land'], X3Y6: [1,'land'], X4Y6: [1,'land'], X5Y6: [1,'land'], X6Y6: [1,'vatn'], X7Y6: [1,'vatn'],
+      X0Y7: [1,'vatn'], X1Y7: [1,'land'], X2Y7: [1,'land'], X3Y7: [1,'land'], X4Y7: [1,'land'], X5Y7: [1,'land'], X6Y7: [1,'vatn'], X7Y7: [1,'stopp']
   },
-  1:{startePeng:9,
-    X0Y0:'start',X1Y0:'vatn', X2Y0:'land', X3Y0:'land', X4Y0:'land', X5Y0:'land', X6Y0:'land', X7Y0:'vatn',  
-    X0Y1:'vatn', X1Y1:'vatn', X2Y1:'land', X3Y1:'land', X4Y1:'fjell', X5Y1:'land', X6Y1:'vatn', X7Y1:'vatn',  
-    X0Y2:'vatn', X1Y2:'vatn', X2Y2:'land', X3Y2:'land', X4Y2:'fjell', X5Y2:'vatn', X6Y2:'vatn', X7Y2:'vatn',  
-    X0Y3:'vatn', X1Y3:'vatn', X2Y3:'fjell', X3Y3:'land', X4Y3:'fjell', X5Y3:'land', X6Y3:'vatn', X7Y3:'vatn',  
-    X0Y4:'vatn', X1Y4:'vatn', X2Y4:'fjell', X3Y4:'land', X4Y4:'vatn', X5Y4:'land', X6Y4:'vatn', X7Y4:'vatn',  
-    X0Y5:'vatn', X1Y5:'vatn', X2Y5:'fjell', X3Y5:'land', X4Y5:'vatn', X5Y5:'land', X6Y5:'vatn', X7Y5:'vatn',  
-    X0Y6:'vatn', X1Y6:'land', X2Y6:'fjell', X3Y6:'land', X4Y6:'land', X5Y6:'vatn', X6Y6:'vatn', X7Y6:'vatn',  
-    X0Y7:'vatn', X1Y7:'land', X2Y7:'fjell', X3Y7:'land', X4Y7:'land', X5Y7:'land', X6Y7:'vatn', X7Y7:'stopp'
-  }
+  1: { startePeng: 9,
+      X0Y0: [1,'start'],X1Y0: [1,'vatn'], X2Y0: [1,'land'], X3Y0:  [1,'land'], X4Y0: [1,'land'], X5Y0: [1,'land'], X6Y0: [1,'land'], X7Y0: [1,'vatn'],
+      X0Y1: [1,'vatn'], X1Y1: [1,'vatn'], X2Y1: [1,'land'], X3Y1:  [1,'land'], X4Y1: [1,'fjell'], X5Y1:[1,'land'], X6Y1: [1,'vatn'], X7Y1: [1,'vatn'],
+      X0Y2: [1,'vatn'], X1Y2: [1,'vatn'], X2Y2: [1,'land'], X3Y2:  [1,'land'], X4Y2: [1,'fjell'], X5Y2:[1,'vatn'], X6Y2: [1,'vatn'], X7Y2: [1,'vatn'],
+      X0Y3: [1,'vatn'], X1Y3: [1,'vatn'], X2Y3: [1,'fjell'], X3Y3: [1,'land'], X4Y3: [1,'fjell'], X5Y3:[1,'land'], X6Y3: [1,'vatn'], X7Y3: [1,'vatn'],
+      X0Y4: [1,'vatn'], X1Y4: [1,'vatn'], X2Y4: [1,'fjell'], X3Y4: [1,'land'], X4Y4: [1,'vatn'], X5Y4: [1,'land'], X6Y4: [1,'vatn'], X7Y4: [1,'vatn'],
+      X0Y5: [1,'vatn'], X1Y5: [1,'vatn'], X2Y5: [1,'fjell'], X3Y5: [1,'land'], X4Y5: [1,'vatn'], X5Y5: [1,'land'], X6Y5: [1,'vatn'], X7Y5: [1,'vatn'],
+      X0Y6: [1,'vatn'], X1Y6: [1,'land'], X2Y6: [1,'fjell'], X3Y6: [1,'land'], X4Y6: [1,'land'], X5Y6: [1,'vatn'], X6Y6: [1,'vatn'], X7Y6: [1,'vatn'],
+      X0Y7: [1,'vatn'], X1Y7: [1,'land'], X2Y7: [1,'fjell'], X3Y7: [1,'land'], X4Y7: [1,'land'], X5Y7: [1,'land'], X6Y7: [1,'vatn'], X7Y7: [1,'stopp']
+  },
+  2: { startePeng: 11,
+    X0Y0: [1,'start'],X1Y0: [1,'vatn'], X2Y0: [1,'land'], X3Y0: [1,'fjell'],X4Y0: [1,'land'], X5Y0: [1,'land'], X6Y0: [1,'land'], X7Y0: [1,'vatn'],
+    X0Y1: [1,'vatn'], X1Y1: [1,'vatn'], X2Y1: [1,'land'], X3Y1: [1,'land'], X4Y1: [1,'fjell'],X5Y1: [1,'land'], X6Y1: [1,'vatn'], X7Y1: [1,'vatn'],
+    X0Y2: [1,'vatn'], X1Y2: [1,'vatn'], X2Y2: [1,'land'], X3Y2: [1,'vatn'], X4Y2: [1,'fjell'],X5Y2: [1,'vatn'], X6Y2: [1,'vatn'], X7Y2: [1,'vatn'],
+    X0Y3: [1,'vatn'], X1Y3: [1,'vatn'], X2Y3: [1,'fjell'],X3Y3: [1,'land'], X4Y3: [1,'fjell'],X5Y3: [1,'land'], X6Y3: [1,'vatn'], X7Y3: [1,'vatn'],
+    X0Y4: [1,'vatn'], X1Y4: [1,'vatn'], X2Y4: [1,'fjell'],X3Y4: [1,'land'], X4Y4: [1,'vatn'], X5Y4: [1,'land'], X6Y4: [1,'vatn'], X7Y4: [1,'vatn'],
+    X0Y5: [1,'vatn'], X1Y5: [1,'vatn'], X2Y5: [1,'fjell'],X3Y5: [1,'fjell'],X4Y5: [1,'vatn'], X5Y5: [1,'land'], X6Y5: [1,'vatn'], X7Y5: [1,'vatn'],
+    X0Y6: [1,'vatn'], X1Y6: [1,'land'], X2Y6: [1,'fjell'],X3Y6: [1,'land'], X4Y6: [1,'fjell'],X5Y6: [1,'vatn'], X6Y6: [1,'vatn'], X7Y6: [1,'vatn'],
+    X0Y7: [1,'vatn'], X1Y7: [1,'land'], X2Y7: [1,'fjell'],X3Y7: [1,'land'], X4Y7: [1,'land'], X5Y7: [1,'land'], X6Y7: [1,'vatn'], X7Y7: [1,'stopp']
 }
+};
 
-const ruteTypar = {
-  start:{
-    niva:0,
-    farge:'red'
-  },
-  stopp:{
-    niva:0,
-    farge:'red'
-  },
-  vatn:{
-    niva:0,
-    farge:'#105fcc'
-  },
-  kanal:{
-    niva:0,
-    farge:'#8c5c1c'
-  },
-  land:{
-    niva:1,
-    farge:'green'
-  },
-  fjell:{
-    niva:2,
-    farge:'grey'
-  }
-}
-let spelaNiva:number = 0;
+let spelarNiva:number = 0;
 let peng:number = 0;
 let ruter:Ruter = {};
 let ruteListe:string[] = [];
 
 function oppstart() {
-  lagreKjeks(spelaNiva, peng)
+  lagreKjeks(spelarNiva, peng)
   sjekkEtterKjeks()
   lagBrett()
   visInfomelding('meldingStart')
@@ -66,10 +50,10 @@ function lagBrett(){
     for(let y=0;y<8;y++){
       let id:string = 'X'+x+'Y'+y;
       ruteListe.push(id);
-      ruter[id] = new Rute(x, y, brettData[spelaNiva][id as keyof brettDataNiva]);
+      ruter[id] = new Rute(x, y, brettData[spelarNiva][id as keyof brettDataNiva][0], brettData[spelarNiva][id as keyof brettDataNiva][1]);
     }
   }
-  peng = brettData[spelaNiva].startePeng;
+  peng = brettData[spelarNiva].startePeng;
   tegnTopp()
   TegnHoved()
 
@@ -87,7 +71,7 @@ function sjekkEtterKjeks() {
   //}
   //return "";  
   peng = 10;
-  spelaNiva = 0;
+  spelarNiva = 0;
 }
 function lagreKjeks(niva:number, peng:number) {
   document.cookie = "KanalAS:" + niva + ":" + peng + ";" + "expires=Thu, 18 Dec 2033 12:00:00 UTC;path=/";
@@ -107,18 +91,19 @@ function checkCookie() {
 }*/
 
 function tegnTopp(){
-  document.getElementById('topp')!.innerHTML = '<p>Peng: ' + peng + '  Level: ' + spelaNiva + '<p>';
+  document.getElementById('topp')!.innerHTML = '<p>Peng: ' + peng + '  Level: ' + spelarNiva + '<p>';
 }
 
 function TegnHoved() {
   ruteListe.forEach(nr => {
-    document.getElementById(nr)!.style.background = ruteTypar[ruter[nr].type].farge;
+   if(ruter[nr].type === 'vatn' || ruter[nr].type === 'land')
+    document.getElementById(nr)!.className = 'rute ' + ruter[nr].type + ruter[nr].niva;
   });
 }
 
 
 
-function trykkRute(nr:string){
+function trykkPaRute(nr:string){
   const naboTypar = finnNaboTypar(finnNaboRuter(nr));
   if(!sjekkPeng(naboTypar)){return;}
   if(ruter[nr].type === 'fjell'){ return;
@@ -210,7 +195,7 @@ function oppdaterRuteType(nr:string,nyType:RuteTypar){
 }
 
 function vinn(){
-  spelaNiva++;
+  spelarNiva++;
   peng+=5;
   visInfomelding('meldingNesteNiva')
 }
@@ -226,7 +211,7 @@ function fjernInfomelding(){
 }
 
 function nesteNiva(){
-  if(spelaNiva > maksNiva){return;}
+  if(spelarNiva > maksNiva){return;}
   fjernInfomelding()
   lagBrett()
 }

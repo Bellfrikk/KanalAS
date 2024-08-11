@@ -56,90 +56,100 @@
         background-color:rgba(255, 230, 0, 0.7);
         color:black;
       }
+  .start { background-color: rgb(241, 71, 71);}
+  .stopp { background-color: rgb(241, 71, 71);}
+  .vatn0 { background-color: #105fcc;}
+  .vatn1 { background-color: #3c82e5;}
+  .vatn2 { background-color: #85b4f5;}
+  .kanal { background-color: #c58026;}
+  .land0 { background-color: green;}
+  .land1 { background-color: rgb(105, 157, 26);}
+  .land2 { background-color: rgb(142, 210, 33);}
+  .fjell { background-color: grey;}
     </style>
 </head>
 <body>
   <div id="topp"></div>
   <div id="hoved">
     <div class="rekke">
-    <div id="X0Y0" class="rute" onclick="trykkRute('X0Y0')"></div>  
-    <div id="X1Y0" class="rute" onclick="trykkRute('X1Y0')"></div>  
-    <div id="X2Y0" class="rute" onclick="trykkRute('X2Y0')"></div>  
-    <div id="X3Y0" class="rute" onclick="trykkRute('X3Y0')"></div>  
-    <div id="X4Y0" class="rute" onclick="trykkRute('X4Y0')"></div>  
-    <div id="X5Y0" class="rute" onclick="trykkRute('X5Y0')"></div>  
-    <div id="X6Y0" class="rute" onclick="trykkRute('X6Y0')"></div>  
-    <div id="X7Y0" class="rute" onclick="trykkRute('X7Y0')"></div>
+    <div id="X0Y0" class="rute" onclick="trykkPaRute('X0Y0')"></div>  
+    <div id="X1Y0" class="rute" onclick="trykkPaRute('X1Y0')"></div>  
+    <div id="X2Y0" class="rute" onclick="trykkPaRute('X2Y0')"></div>  
+    <div id="X3Y0" class="rute" onclick="trykkPaRute('X3Y0')"></div>  
+    <div id="X4Y0" class="rute" onclick="trykkPaRute('X4Y0')"></div>  
+    <div id="X5Y0" class="rute" onclick="trykkPaRute('X5Y0')"></div>  
+    <div id="X6Y0" class="rute" onclick="trykkPaRute('X6Y0')"></div>  
+    <div id="X7Y0" class="rute" onclick="trykkPaRute('X7Y0')"></div>
     </div>
     <div class="rekke">
-    <div id="X0Y1" class="rute" onclick="trykkRute('X0Y1')"></div>  
-    <div id="X1Y1" class="rute" onclick="trykkRute('X1Y1')"></div>  
-    <div id="X2Y1" class="rute" onclick="trykkRute('X2Y1')"></div>  
-    <div id="X3Y1" class="rute" onclick="trykkRute('X3Y1')"></div>  
-    <div id="X4Y1" class="rute" onclick="trykkRute('X4Y1')"></div>  
-    <div id="X5Y1" class="rute" onclick="trykkRute('X5Y1')"></div>  
-    <div id="X6Y1" class="rute" onclick="trykkRute('X6Y1')"></div>  
-    <div id="X7Y1" class="rute" onclick="trykkRute('X7Y1')"></div>
+    <div id="X0Y1" class="rute" onclick="trykkPaRute('X0Y1')"></div>  
+    <div id="X1Y1" class="rute" onclick="trykkPaRute('X1Y1')"></div>  
+    <div id="X2Y1" class="rute" onclick="trykkPaRute('X2Y1')"></div>  
+    <div id="X3Y1" class="rute" onclick="trykkPaRute('X3Y1')"></div>  
+    <div id="X4Y1" class="rute" onclick="trykkPaRute('X4Y1')"></div>  
+    <div id="X5Y1" class="rute" onclick="trykkPaRute('X5Y1')"></div>  
+    <div id="X6Y1" class="rute" onclick="trykkPaRute('X6Y1')"></div>  
+    <div id="X7Y1" class="rute" onclick="trykkPaRute('X7Y1')"></div>
     </div>
     <div class="rekke">
-    <div id="X0Y2" class="rute" onclick="trykkRute('X0Y2')"></div>  
-    <div id="X1Y2" class="rute" onclick="trykkRute('X1Y2')"></div>  
-    <div id="X2Y2" class="rute" onclick="trykkRute('X2Y2')"></div>  
-    <div id="X3Y2" class="rute" onclick="trykkRute('X3Y2')"></div>  
-    <div id="X4Y2" class="rute" onclick="trykkRute('X4Y2')"></div>  
-    <div id="X5Y2" class="rute" onclick="trykkRute('X5Y2')"></div>  
-    <div id="X6Y2" class="rute" onclick="trykkRute('X6Y2')"></div>  
-    <div id="X7Y2" class="rute" onclick="trykkRute('X7Y2')"></div>
+    <div id="X0Y2" class="rute" onclick="trykkPaRute('X0Y2')"></div>  
+    <div id="X1Y2" class="rute" onclick="trykkPaRute('X1Y2')"></div>  
+    <div id="X2Y2" class="rute" onclick="trykkPaRute('X2Y2')"></div>  
+    <div id="X3Y2" class="rute" onclick="trykkPaRute('X3Y2')"></div>  
+    <div id="X4Y2" class="rute" onclick="trykkPaRute('X4Y2')"></div>  
+    <div id="X5Y2" class="rute" onclick="trykkPaRute('X5Y2')"></div>  
+    <div id="X6Y2" class="rute" onclick="trykkPaRute('X6Y2')"></div>  
+    <div id="X7Y2" class="rute" onclick="trykkPaRute('X7Y2')"></div>
     </div>
     <div class="rekke">
-    <div id="X0Y3" class="rute" onclick="trykkRute('X0Y3')"></div>    
-    <div id="X1Y3" class="rute" onclick="trykkRute('X1Y3')"></div>    
-    <div id="X2Y3" class="rute" onclick="trykkRute('X2Y3')"></div>  
-    <div id="X3Y3" class="rute" onclick="trykkRute('X3Y3')"></div>  
-    <div id="X4Y3" class="rute" onclick="trykkRute('X4Y3')"></div>  
-    <div id="X5Y3" class="rute" onclick="trykkRute('X5Y3')"></div>  
-    <div id="X6Y3" class="rute" onclick="trykkRute('X6Y3')"></div>  
-    <div id="X7Y3" class="rute" onclick="trykkRute('X7Y3')"></div>
+    <div id="X0Y3" class="rute" onclick="trykkPaRute('X0Y3')"></div>    
+    <div id="X1Y3" class="rute" onclick="trykkPaRute('X1Y3')"></div>    
+    <div id="X2Y3" class="rute" onclick="trykkPaRute('X2Y3')"></div>  
+    <div id="X3Y3" class="rute" onclick="trykkPaRute('X3Y3')"></div>  
+    <div id="X4Y3" class="rute" onclick="trykkPaRute('X4Y3')"></div>  
+    <div id="X5Y3" class="rute" onclick="trykkPaRute('X5Y3')"></div>  
+    <div id="X6Y3" class="rute" onclick="trykkPaRute('X6Y3')"></div>  
+    <div id="X7Y3" class="rute" onclick="trykkPaRute('X7Y3')"></div>
     </div>
     <div class="rekke">
-    <div id="X0Y4" class="rute" onclick="trykkRute('X0Y4')"></div>   
-    <div id="X1Y4" class="rute" onclick="trykkRute('X1Y4')"></div>   
-    <div id="X2Y4" class="rute" onclick="trykkRute('X2Y4')"></div>  
-    <div id="X3Y4" class="rute" onclick="trykkRute('X3Y4')"></div>  
-    <div id="X4Y4" class="rute" onclick="trykkRute('X4Y4')"></div>  
-    <div id="X5Y4" class="rute" onclick="trykkRute('X5Y4')"></div>  
-    <div id="X6Y4" class="rute" onclick="trykkRute('X6Y4')"></div>  
-    <div id="X7Y4" class="rute" onclick="trykkRute('X7Y4')"></div>
+    <div id="X0Y4" class="rute" onclick="trykkPaRute('X0Y4')"></div>   
+    <div id="X1Y4" class="rute" onclick="trykkPaRute('X1Y4')"></div>   
+    <div id="X2Y4" class="rute" onclick="trykkPaRute('X2Y4')"></div>  
+    <div id="X3Y4" class="rute" onclick="trykkPaRute('X3Y4')"></div>  
+    <div id="X4Y4" class="rute" onclick="trykkPaRute('X4Y4')"></div>  
+    <div id="X5Y4" class="rute" onclick="trykkPaRute('X5Y4')"></div>  
+    <div id="X6Y4" class="rute" onclick="trykkPaRute('X6Y4')"></div>  
+    <div id="X7Y4" class="rute" onclick="trykkPaRute('X7Y4')"></div>
     </div>
     <div class="rekke">
-    <div id="X0Y5" class="rute" onclick="trykkRute('X0Y5')"></div>   
-    <div id="X1Y5" class="rute" onclick="trykkRute('X1Y5')"></div>    
-    <div id="X2Y5" class="rute" onclick="trykkRute('X2Y5')"></div>  
-    <div id="X3Y5" class="rute" onclick="trykkRute('X3Y5')"></div>  
-    <div id="X4Y5" class="rute" onclick="trykkRute('X4Y5')"></div>  
-    <div id="X5Y5" class="rute" onclick="trykkRute('X5Y5')"></div>  
-    <div id="X6Y5" class="rute" onclick="trykkRute('X6Y5')"></div>  
-    <div id="X7Y5" class="rute" onclick="trykkRute('X7Y5')"></div>
+    <div id="X0Y5" class="rute" onclick="trykkPaRute('X0Y5')"></div>   
+    <div id="X1Y5" class="rute" onclick="trykkPaRute('X1Y5')"></div>    
+    <div id="X2Y5" class="rute" onclick="trykkPaRute('X2Y5')"></div>  
+    <div id="X3Y5" class="rute" onclick="trykkPaRute('X3Y5')"></div>  
+    <div id="X4Y5" class="rute" onclick="trykkPaRute('X4Y5')"></div>  
+    <div id="X5Y5" class="rute" onclick="trykkPaRute('X5Y5')"></div>  
+    <div id="X6Y5" class="rute" onclick="trykkPaRute('X6Y5')"></div>  
+    <div id="X7Y5" class="rute" onclick="trykkPaRute('X7Y5')"></div>
     </div>
     <div class="rekke">
-    <div id="X0Y6" class="rute" onclick="trykkRute('X0Y6')"></div>  
-    <div id="X1Y6" class="rute" onclick="trykkRute('X1Y6')"></div>  
-    <div id="X2Y6" class="rute" onclick="trykkRute('X2Y6')"></div>  
-    <div id="X3Y6" class="rute" onclick="trykkRute('X3Y6')"></div>  
-    <div id="X4Y6" class="rute" onclick="trykkRute('X4Y6')"></div>  
-    <div id="X5Y6" class="rute" onclick="trykkRute('X5Y6')"></div>  
-    <div id="X6Y6" class="rute" onclick="trykkRute('X6Y6')"></div>  
-    <div id="X7Y6" class="rute" onclick="trykkRute('X7Y6')"></div>
+    <div id="X0Y6" class="rute" onclick="trykkPaRute('X0Y6')"></div>  
+    <div id="X1Y6" class="rute" onclick="trykkPaRute('X1Y6')"></div>  
+    <div id="X2Y6" class="rute" onclick="trykkPaRute('X2Y6')"></div>  
+    <div id="X3Y6" class="rute" onclick="trykkPaRute('X3Y6')"></div>  
+    <div id="X4Y6" class="rute" onclick="trykkPaRute('X4Y6')"></div>  
+    <div id="X5Y6" class="rute" onclick="trykkPaRute('X5Y6')"></div>  
+    <div id="X6Y6" class="rute" onclick="trykkPaRute('X6Y6')"></div>  
+    <div id="X7Y6" class="rute" onclick="trykkPaRute('X7Y6')"></div>
     </div>
     <div class="rekke">
-    <div id="X0Y7" class="rute" onclick="trykkRute('X0Y7')"></div>    
-    <div id="X1Y7" class="rute" onclick="trykkRute('X1Y7')"></div>    
-    <div id="X2Y7" class="rute" onclick="trykkRute('X2Y7')"></div>  
-    <div id="X3Y7" class="rute" onclick="trykkRute('X3Y7')"></div>  
-    <div id="X4Y7" class="rute" onclick="trykkRute('X4Y7')"></div>  
-    <div id="X5Y7" class="rute" onclick="trykkRute('X5Y7')"></div>  
-    <div id="X6Y7" class="rute" onclick="trykkRute('X6Y7')"></div>  
-    <div id="X7Y7" class="rute" onclick="trykkRute('X7Y7')"></div>
+    <div id="X0Y7" class="rute" onclick="trykkPaRute('X0Y7')"></div>    
+    <div id="X1Y7" class="rute" onclick="trykkPaRute('X1Y7')"></div>    
+    <div id="X2Y7" class="rute" onclick="trykkPaRute('X2Y7')"></div>  
+    <div id="X3Y7" class="rute" onclick="trykkPaRute('X3Y7')"></div>  
+    <div id="X4Y7" class="rute" onclick="trykkPaRute('X4Y7')"></div>  
+    <div id="X5Y7" class="rute" onclick="trykkPaRute('X5Y7')"></div>  
+    <div id="X6Y7" class="rute" onclick="trykkPaRute('X6Y7')"></div>  
+    <div id="X7Y7" class="rute" onclick="trykkPaRute('X7Y7')"></div>
     </div>
     <div id="meldingStart" class="infolinje braMelding" onclick="nesteNiva()" ><p>Lag ein kanal! START></p></div>
     <div id="meldingNesteNiva" class="infolinje braMelding" onclick="nesteNiva()"><p>Du klarte det! NESTE></p></div>
