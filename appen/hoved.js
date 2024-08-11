@@ -194,7 +194,12 @@ function finnNaboTypar(naboar) {
 }
 function oppdaterRuteType(nr, nyType) {
     ruter[nr].type = nyType;
-    document.getElementById(nr).style.background = ruteTypar[nyType].farge;
+    if (nyType === 'vatn' || nyType === 'land') {
+        document.getElementById(nr).className = '"rute ' + nyType + ruter[nr].niva + '"';
+    }
+    else {
+        document.getElementById(nr).className = '"rute ' + nyType + '"';
+    }
 }
 function vinn() {
     spelarNiva++;
