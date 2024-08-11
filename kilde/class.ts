@@ -2,7 +2,7 @@ type RuteTypar = "start"|"stopp"|"vatn"|"land"|"kanal"|"fjell"|"sluse";
 
 type RuteData = [number,RuteTypar];
 
-type brettDataNiva = { startePeng:number;
+type brettDataNiva = { startePeng:number; melding:string;
   X0Y0:RuteData; X1Y0:RuteData; X2Y0:RuteData; X3Y0:RuteData; X4Y0:RuteData; X5Y0:RuteData; X6Y0:RuteData; X7Y0:RuteData;  
   X0Y1:RuteData; X1Y1:RuteData; X2Y1:RuteData; X3Y1:RuteData; X4Y1:RuteData; X5Y1:RuteData; X6Y1:RuteData; X7Y1:RuteData;  
   X0Y2:RuteData; X1Y2:RuteData; X2Y2:RuteData; X3Y2:RuteData; X4Y2:RuteData; X5Y2:RuteData; X6Y2:RuteData; X7Y2:RuteData;  
@@ -33,4 +33,3 @@ class Rute {
 type Ruter = {
   [key:string]:Rute;
 }
-type infoMelding = 'meldingStart'|'meldingNesteNiva'|'meldingForLitePengar';
