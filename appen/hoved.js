@@ -59,8 +59,8 @@ function tegnTopp() {
 }
 function oppdaterVatn() {
     ruteListe.forEach(nr => {
-        if (ruter[nr].type === 'kilde' || rute.type === 'start' || rute.type === 'stopp') {
-            fyllVatn(rute);
+        if (ruter[nr].type === 'kilde' || ruter[nr].type === 'start' || ruter[nr].type === 'stopp') {
+            fyllVatn(nr);
         }
     });
 }
@@ -97,7 +97,7 @@ function trykkPaRute(nr) {
     else if (ruter[nr].type === 'land') {
         ruter[nr].niva--;
         oppdaterRute(nr);
-        fyllVatn();
+        oppdaterVatn();
         sjekkOmFerdig(nr);
     }
 }
@@ -167,11 +167,11 @@ function finnNaboTypar(naboar) {
     return (svar);
 }
 function oppdaterRute(nr) {
-    if (nyType === 'vatn' || nyType === 'land') {
-        document.getElementById(nr).className = 'rute ' + nyType + ruter[nr].niva;
+    if (ruter[nr].type === 'vatn' || ruter[nr].type === 'land') {
+        document.getElementById(nr).className = 'rute ' + ruter[nr].type + ruter[nr].niva;
     }
     else {
-        document.getElementById(nr).className = 'rute ' + nyType;
+        document.getElementById(nr).className = 'rute ' + ruter[nr].type;
     }
 }
 function vinn() {
@@ -182,9 +182,8 @@ function visFeilmelding() {
     document.getElementById('feilMelding').style.display = 'flex';
 }
 function fjernInfomelding() {
-    document.getElementById('meldingStart').style.display = 'none';
-    document.getElementById('meldingNesteNiva').style.display = 'none';
-    document.getElementById('meldingForLitePengar').style.display = 'none';
+    document.getElementById('melding').style.display = 'none';
+    document.getElementById('feilmelding').style.display = 'none';
 }
 function nesteNiva() {
     if (spelarNiva > maksNiva) {
