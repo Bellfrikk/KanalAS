@@ -1,4 +1,4 @@
-type RuteTypar = "start"|"stopp"|"vatn"|"land"|"kanal"|"fjell"|"sluse";
+type RuteTypar = "start"|"stopp"|"vatn"|"land"|"kilde"|"fjell"|"sluse";
 
 type RuteData = [number,RuteTypar];
 

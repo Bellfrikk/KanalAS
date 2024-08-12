@@ -22,14 +22,14 @@ const brettData = {
         X0Y7: [1, 'vatn'], X1Y7: [1, 'land'], X2Y7: [1, 'fjell'], X3Y7: [1, 'land'], X4Y7: [1, 'land'], X5Y7: [1, 'land'], X6Y7: [1, 'vatn'], X7Y7: [1, 'stopp']
     },
     2: { startePeng: 11, melding: 'Nytt: Sluser kan koble høg og låg kanal.',
-        X0Y0: [1, 'start'], X1Y0: [1, 'vatn'], X2Y0: [1, 'land'], X3Y0: [1, 'fjell'], X4Y0: [1, 'land'], X5Y0: [1, 'land'], X6Y0: [1, 'land'], X7Y0: [1, 'vatn'],
-        X0Y1: [1, 'vatn'], X1Y1: [1, 'vatn'], X2Y1: [1, 'land'], X3Y1: [1, 'land'], X4Y1: [1, 'fjell'], X5Y1: [1, 'land'], X6Y1: [1, 'vatn'], X7Y1: [1, 'vatn'],
-        X0Y2: [1, 'vatn'], X1Y2: [1, 'vatn'], X2Y2: [1, 'land'], X3Y2: [1, 'vatn'], X4Y2: [1, 'fjell'], X5Y2: [1, 'vatn'], X6Y2: [1, 'vatn'], X7Y2: [1, 'vatn'],
-        X0Y3: [1, 'vatn'], X1Y3: [1, 'vatn'], X2Y3: [1, 'fjell'], X3Y3: [1, 'land'], X4Y3: [1, 'fjell'], X5Y3: [1, 'land'], X6Y3: [1, 'vatn'], X7Y3: [1, 'vatn'],
-        X0Y4: [1, 'vatn'], X1Y4: [1, 'vatn'], X2Y4: [1, 'fjell'], X3Y4: [1, 'land'], X4Y4: [1, 'vatn'], X5Y4: [1, 'land'], X6Y4: [1, 'vatn'], X7Y4: [1, 'vatn'],
-        X0Y5: [1, 'vatn'], X1Y5: [1, 'vatn'], X2Y5: [1, 'fjell'], X3Y5: [1, 'fjell'], X4Y5: [1, 'vatn'], X5Y5: [1, 'land'], X6Y5: [1, 'vatn'], X7Y5: [1, 'vatn'],
-        X0Y6: [1, 'vatn'], X1Y6: [1, 'land'], X2Y6: [1, 'fjell'], X3Y6: [1, 'land'], X4Y6: [1, 'fjell'], X5Y6: [1, 'vatn'], X6Y6: [1, 'vatn'], X7Y6: [1, 'vatn'],
-        X0Y7: [1, 'vatn'], X1Y7: [1, 'land'], X2Y7: [1, 'fjell'], X3Y7: [1, 'land'], X4Y7: [1, 'land'], X5Y7: [1, 'land'], X6Y7: [1, 'vatn'], X7Y7: [1, 'stopp']
+        X0Y0: [1, 'start'], X1Y0: [1, 'vatn'], X2Y0: [1, 'land'], X3Y0: [1, 'fjell'], X4Y0: [2, 'land'], X5Y0: [2, 'land'], X6Y0: [2, 'land'], X7Y0: [2, 'vatn'],
+        X0Y1: [1, 'vatn'], X1Y1: [1, 'vatn'], X2Y1: [1, 'land'], X3Y1: [1, 'land'], X4Y1: [2, 'land'], X5Y1: [2, 'land'], X6Y1: [2, 'vatn'], X7Y1: [2, 'vatn'],
+        X0Y2: [1, 'vatn'], X1Y2: [1, 'vatn'], X2Y2: [1, 'land'], X3Y2: [1, 'land'], X4Y2: [2, 'land'], X5Y2: [2, 'land'], X6Y2: [2, 'vatn'], X7Y2: [2, 'vatn'],
+        X0Y3: [1, 'vatn'], X1Y3: [1, 'vatn'], X2Y3: [1, 'fjell'], X3Y3: [1, 'land'], X4Y3: [2, 'land'], X5Y3: [2, 'land'], X6Y3: [2, 'vatn'], X7Y3: [2, 'vatn'],
+        X0Y4: [1, 'vatn'], X1Y4: [1, 'vatn'], X2Y4: [1, 'fjell'], X3Y4: [1, 'land'], X4Y4: [2, 'land'], X5Y4: [2, 'land'], X6Y4: [2, 'vatn'], X7Y4: [2, 'vatn'],
+        X0Y5: [1, 'vatn'], X1Y5: [1, 'vatn'], X2Y5: [1, 'fjell'], X3Y5: [1, 'fjell'], X4Y5: [2, 'land'], X5Y5: [2, 'land'], X6Y5: [2, 'vatn'], X7Y5: [2, 'vatn'],
+        X0Y6: [1, 'vatn'], X1Y6: [1, 'land'], X2Y6: [1, 'fjell'], X3Y6: [1, 'land'], X4Y6: [2, 'land'], X5Y6: [2, 'vatn'], X6Y6: [2, 'vatn'], X7Y6: [2, 'vatn'],
+        X0Y7: [1, 'vatn'], X1Y7: [1, 'land'], X2Y7: [1, 'fjell'], X3Y7: [1, 'land'], X4Y7: [2, 'land'], X5Y7: [2, 'land'], X6Y7: [2, 'vatn'], X7Y7: [2, 'stopp']
     }
 };
 let spelarNiva = 0;
@@ -51,18 +51,39 @@ function lagBrett() {
     }
     peng = brettData[spelarNiva].startePeng;
     tegnTopp();
-    TegnHoved();
-    oppdaterMelding();
+    oppdaterVatn();
+    oppdaterMelding(brettData[spelarNiva].melding);
 }
 function tegnTopp() {
     document.getElementById('topp').innerHTML = '<p>Peng: ' + peng + '  Level: ' + spelarNiva + '<p>';
 }
-function TegnHoved() {
+function oppdaterVatn() {
     ruteListe.forEach(nr => {
-        oppdaterRuteType(nr, ruter[nr].type);
+        if (ruter[nr].type === 'kilde' || rute.type === 'start' || rute.type === 'stopp') {
+            fyllVatn(rute);
+        }
     });
 }
+function fyllVatn(startRute) {
+    let ruterTilSjekk = [startRute];
+    let sjekkaRuter = [];
+    const vannNiva = ruter[startRute].niva;
+    while (ruterTilSjekk.length > 0) {
+        const nr = ruterTilSjekk[0];
+        const naboer = finnNaboRuter(nr);
+        naboer.forEach(nabo => {
+            if (!sjekkaRuter.includes(nabo) && ruter[nabo].niva <= vannNiva) {
+                ruter[nabo].type === 'vatn';
+                oppdaterRute(nr);
+                ruterTilSjekk.push(nabo);
+            }
+        });
+        sjekkaRuter.push(nr);
+        ruterTilSjekk.shift();
+    }
+}
 function oppdaterMelding(melding) {
+    document.getElementById('melding').style.display = 'flex';
     document.getElementById('meldingstekst').innerText = melding;
 }
 function trykkPaRute(nr) {
@@ -74,10 +95,9 @@ function trykkPaRute(nr) {
         return;
     }
     else if (ruter[nr].type === 'land') {
-        oppdaterRuteType(nr, 'kanal');
-        if (naboTypar.includes('vatn')) {
-            fyllKanalar(nr);
-        }
+        ruter[nr].niva--;
+        oppdaterRute(nr);
+        fyllVatn();
         sjekkOmFerdig(nr);
     }
 }
@@ -96,24 +116,6 @@ function sjekkPeng(naboar) {
         peng -= pris;
         tegnTopp();
         return true;
-    }
-}
-function fyllKanalar(startRute) {
-    let ruterTilSjekk = [startRute];
-    let sjekkaRuter = [];
-    while (ruterTilSjekk.length > 0) {
-        const nr = ruterTilSjekk[0];
-        if (ruter[nr].type === 'kanal') {
-            oppdaterRuteType(nr, 'vatn');
-            const naboer = finnNaboRuter(nr);
-            naboer.forEach(nabo => {
-                if (!sjekkaRuter.includes(nabo) && ruter[nabo].type === 'kanal') {
-                    ruterTilSjekk.push(nabo);
-                }
-            });
-        }
-        sjekkaRuter.push(nr);
-        ruterTilSjekk.shift();
     }
 }
 function sjekkOmFerdig(nr) {
@@ -164,8 +166,7 @@ function finnNaboTypar(naboar) {
     });
     return (svar);
 }
-function oppdaterRuteType(nr, nyType) {
-    ruter[nr].type = nyType;
+function oppdaterRute(nr) {
     if (nyType === 'vatn' || nyType === 'land') {
         document.getElementById(nr).className = 'rute ' + nyType + ruter[nr].niva;
     }

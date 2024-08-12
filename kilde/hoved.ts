@@ -44,7 +44,6 @@ function oppstart() {
 }
 
 function lagBrett(){
-  
   for(let x=0;x<8;x++){
     for(let y=0;y<8;y++){
       let id:string = 'X'+x+'Y'+y;
@@ -55,7 +54,7 @@ function lagBrett(){
   peng = brettData[spelarNiva].startePeng;
   tegnTopp()
   oppdaterVatn()
-  oppdaterMelding()
+  oppdaterMelding(brettData[spelarNiva].melding)
 }
 
 function tegnTopp(){
