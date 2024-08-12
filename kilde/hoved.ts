@@ -91,6 +91,7 @@ function fyllVatn(startRute:string){
 }
 
 function oppdaterMelding(melding:string) {
+  document.getElementById('melding')!.style.display = 'flex';
   document.getElementById('meldingstekst')!.innerText = melding;
 }
 
