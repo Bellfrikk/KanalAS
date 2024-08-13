@@ -182,8 +182,7 @@ function visFeilmelding(){
 }
 function fjernInfomelding(){
   document.getElementById('melding')!.style.display = 'none';
-  document.getElementById('feilmelding')!.style.display = 'none';
-
+  document.getElementById('feilMelding')!.style.display = 'none';
 }
 
 function nesteNiva(){
