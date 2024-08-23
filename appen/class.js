@@ -5,5 +5,6 @@ class Rute {
         this.y = y;
         this.niva = niva;
         this.type = type;
+        this.vatn = type === 'vatn' ? true : false;
     }
 }

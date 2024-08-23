@@ -23,136 +23,152 @@
       }
       #hoved{
         width:80vmin;
-        height:auto;
+        height:80vmin;
       }
       .rekke{
         display: flex;
         flex-direction: row;
       }
       .rute{
-        background-color: aquamarine;
-        border:dotted rgba(0, 0, 0, 0.311) 1px;
+        background-color: #237af5;
+        border:dotted #237af5 1px;
         width: 10vmin;
         height:10vmin;
       }
-      .infolinje{
+      .braMelding{
+        display: flex;
+        background-color:rgb(127, 255, 0, 0.7);
+        color:black;
+      }
+      .feilMelding{
+        display: flex;
+        background-color:rgba(255, 230, 0, 0.7);
+        color:black;
+      }
+      .fjernMelding {
         display:none;
+      }
+      #melding{
         flex-direction: column;
         justify-content: center;
         align-items: center;
         position: absolute;
         z-index: 2;
-        top:43vh;
-        width: 80vmin;
-        height:11vmin;
+        top:40vh;
+        width:80vmin;
+        height:auto;
         font-size: larger;
+      }
+  .start0, .stopp0, .start2, .stopp2 { background-color: rgb(241, 71, 71);}
+  .vatn0 { background-color: #237af5;}
+  .vatn2 { background-color: #54b5ffd5;}
+  .kanal0, .kanal2 { background-color: #c58026;}
+  .kanal1, .kanal2 { background-color: #f8a02d;}
+  .land0 { background-color: rgb(21, 238, 21);}
+  .land2 { background-color: rgb(157, 255, 0);}
+  .fjell0, .fjell2 { background-color: grey;}
+  .sluse1 { background-color: rgb(200, 219, 214);}
+  .sluse { border:solid #999 1px;}
 
-      }
-      .braMelding{
-        background-color:rgb(127, 255, 0, 0.7);
-        color:black;
-      }
-      .feilMelding{
-        background-color:rgba(255, 230, 0, 0.7);
-        color:black;
-      }
-  .start { background-color: rgb(241, 71, 71);}
-  .stopp { background-color: rgb(241, 71, 71);}
-  .vatn0 { background-color: #105fcc;}
-  .vatn1 { background-color: #3c82e5;}
-  .vatn2 { background-color: #85b4f5;}
-  .kanal { background-color: #c58026;}
-  .land0 { background-color: green;}
-  .land1 { background-color: rgb(105, 157, 26);}
-  .land2 { background-color: rgb(142, 210, 33);}
-  .fjell { background-color: grey;}
+  
+  table{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    border-spacing:0;
+  }
+  .hjorna{
+    height:3vmin;
+    width:3vmin;
+    background-color: rgb(50, 152, 43);
+  }
+  .opp, .ned{
+    height:3vmin;
+    width:4vmin;
+    background-color: #54b5ffd5;
+  }
+  .hogre, .venstre{
+    height:4vmin;
+    width:3vmin;
+    background-color: #54b5ffd5;
+  }
+  .midt{
+    height:4vmin;
+    width:4vmin;
+    background-color: #54b5ffd5;
+  }
     </style>
 </head>
 <body>
   <div id="topp"></div>
   <div id="hoved">
     <div class="rekke">
-    <div id="X0Y0" class="rute" onclick="trykkPaRute('X0Y0')"></div>  
-    <div id="X1Y0" class="rute" onclick="trykkPaRute('X1Y0')"></div>  
-    <div id="X2Y0" class="rute" onclick="trykkPaRute('X2Y0')"></div>  
-    <div id="X3Y0" class="rute" onclick="trykkPaRute('X3Y0')"></div>  
-    <div id="X4Y0" class="rute" onclick="trykkPaRute('X4Y0')"></div>  
-    <div id="X5Y0" class="rute" onclick="trykkPaRute('X5Y0')"></div>  
-    <div id="X6Y0" class="rute" onclick="trykkPaRute('X6Y0')"></div>  
-    <div id="X7Y0" class="rute" onclick="trykkPaRute('X7Y0')"></div>
+    <div id="X0Y0" class="rute" onclick="trykkPaRute('X0Y0')"><table><tr><td id="X0Y0VO" class="hjorna"></td><td id="X0Y0O" class="opp"></td><td id="X0Y0HO" class="hjorna"></td></tr><tr><td id="X0Y0V" class="venstre"></td><td id="X0Y0M" class="midt"></td><td id="X0Y0H" class="hogre"></td></tr><tr><td id="X0Y0VN" class="hjorna"></td><td id="X0Y0N" class="ned"></td><td id="X0Y0HN" class="hjorna"></td></tr></table></div>  
+    <div id="X1Y0" class="rute" onclick="trykkPaRute('X1Y0')"><table><tr><td id="X1Y0VO" class="hjorna"></td><td id="X1Y0O" class="opp"></td><td id="X1Y0HO" class="hjorna"></td></tr><tr><td id="X1Y0V" class="venstre"></td><td id="X1Y0M" class="midt"></td><td id="X1Y0H" class="hogre"></td></tr><tr><td id="X1Y0VN" class="hjorna"></td><td id="X1Y0N" class="ned"></td><td id="X1Y0HN" class="hjorna"></td></tr></table></div>  
+    <div id="X2Y0" class="rute" onclick="trykkPaRute('X2Y0')"><table><tr><td id="X2Y0VO" class="hjorna"></td><td id="X2Y0O" class="opp"></td><td id="X2Y0HO" class="hjorna"></td></tr><tr><td id="X2Y0V" class="venstre"></td><td id="X2Y0M" class="midt"></td><td id="X2Y0H" class="hogre"></td></tr><tr><td id="X2Y0VN" class="hjorna"></td><td id="X2Y0N" class="ned"></td><td id="X2Y0HN" class="hjorna"></td></tr></table></div>  
+    <div id="X3Y0" class="rute" onclick="trykkPaRute('X3Y0')"><table><tr><td id="X3Y0VO" class="hjorna"></td><td id="X3Y0O" class="opp"></td><td id="X3Y0HO" class="hjorna"></td></tr><tr><td id="X3Y0V" class="venstre"></td><td id="X3Y0M" class="midt"></td><td id="X3Y0H" class="hogre"></td></tr><tr><td id="X3Y0VN" class="hjorna"></td><td id="X3Y0N" class="ned"></td><td id="X3Y0HN" class="hjorna"></td></tr></table></div>  
+    <div id="X4Y0" class="rute" onclick="trykkPaRute('X4Y0')"><table><tr><td id="X4Y0VO" class="hjorna"></td><td id="X4Y0O" class="opp"></td><td id="X4Y0HO" class="hjorna"></td></tr><tr><td id="X4Y0V" class="venstre"></td><td id="X4Y0M" class="midt"></td><td id="X4Y0H" class="hogre"></td></tr><tr><td id="X4Y0VN" class="hjorna"></td><td id="X4Y0N" class="ned"></td><td id="X4Y0HN" class="hjorna"></td></tr></table></div>  
+    <div id="X5Y0" class="rute" onclick="trykkPaRute('X5Y0')"><table><tr><td id="X5Y0VO" class="hjorna"></td><td id="X5Y0O" class="opp"></td><td id="X5Y0HO" class="hjorna"></td></tr><tr><td id="X5Y0V" class="venstre"></td><td id="X5Y0M" class="midt"></td><td id="X5Y0H" class="hogre"></td></tr><tr><td id="X5Y0VN" class="hjorna"></td><td id="X5Y0N" class="ned"></td><td id="X5Y0HN" class="hjorna"></td></tr></table></div>  
+    <div id="X6Y0" class="rute" onclick="trykkPaRute('X6Y0')"><table><tr><td id="X6Y0VO" class="hjorna"></td><td id="X6Y0O" class="opp"></td><td id="X6Y0HO" class="hjorna"></td></tr><tr><td id="X6Y0V" class="venstre"></td><td id="X6Y0M" class="midt"></td><td id="X6Y0H" class="hogre"></td></tr><tr><td id="X6Y0VN" class="hjorna"></td><td id="X6Y0N" class="ned"></td><td id="X6Y0HN" class="hjorna"></td></tr></table></div>  
+    <div id="X7Y0" class="rute" onclick="trykkPaRute('X7Y0')"><table><tr><td id="X7Y0VO" class="hjorna"></td><td id="X7Y0O" class="opp"></td><td id="X7Y0HO" class="hjorna"></td></tr><tr><td id="X7Y0V" class="venstre"></td><td id="X7Y0M" class="midt"></td><td id="X7Y0H" class="hogre"></td></tr><tr><td id="X7Y0VN" class="hjorna"></td><td id="X7Y0N" class="ned"></td><td id="X7Y0HN" class="hjorna"></td></tr></table></div></div><div class="rekke">
+    <div id="X0Y1" class="rute" onclick="trykkPaRute('X0Y1')"><table><tr><td id="X0Y1VO" class="hjorna"></td><td id="X0Y1O" class="opp"></td><td id="X0Y1HO" class="hjorna"></td></tr><tr><td id="X0Y1V" class="venstre"></td><td id="X0Y1M" class="midt"></td><td id="X0Y1H" class="hogre"></td></tr><tr><td id="X0Y1VN" class="hjorna"></td><td id="X0Y1N" class="ned"></td><td id="X0Y1HN" class="hjorna"></td></tr></table></div>  
+    <div id="X1Y1" class="rute" onclick="trykkPaRute('X1Y1')"><table><tr><td id="X1Y1VO" class="hjorna"></td><td id="X1Y1O" class="opp"></td><td id="X1Y1HO" class="hjorna"></td></tr><tr><td id="X1Y1V" class="venstre"></td><td id="X1Y1M" class="midt"></td><td id="X1Y1H" class="hogre"></td></tr><tr><td id="X1Y1VN" class="hjorna"></td><td id="X1Y1N" class="ned"></td><td id="X1Y1HN" class="hjorna"></td></tr></table></div>  
+    <div id="X2Y1" class="rute" onclick="trykkPaRute('X2Y1')"><table><tr><td id="X2Y1VO" class="hjorna"></td><td id="X2Y1O" class="opp"></td><td id="X2Y1HO" class="hjorna"></td></tr><tr><td id="X2Y1V" class="venstre"></td><td id="X2Y1M" class="midt"></td><td id="X2Y1H" class="hogre"></td></tr><tr><td id="X2Y1VN" class="hjorna"></td><td id="X2Y1N" class="ned"></td><td id="X2Y1HN" class="hjorna"></td></tr></table></div>  
+    <div id="X3Y1" class="rute" onclick="trykkPaRute('X3Y1')"><table><tr><td id="X3Y1VO" class="hjorna"></td><td id="X3Y1O" class="opp"></td><td id="X3Y1HO" class="hjorna"></td></tr><tr><td id="X3Y1V" class="venstre"></td><td id="X3Y1M" class="midt"></td><td id="X3Y1H" class="hogre"></td></tr><tr><td id="X3Y1VN" class="hjorna"></td><td id="X3Y1N" class="ned"></td><td id="X3Y1HN" class="hjorna"></td></tr></table></div>  
+    <div id="X4Y1" class="rute" onclick="trykkPaRute('X4Y1')"><table><tr><td id="X4Y1VO" class="hjorna"></td><td id="X4Y1O" class="opp"></td><td id="X4Y1HO" class="hjorna"></td></tr><tr><td id="X4Y1V" class="venstre"></td><td id="X4Y1M" class="midt"></td><td id="X4Y1H" class="hogre"></td></tr><tr><td id="X4Y1VN" class="hjorna"></td><td id="X4Y1N" class="ned"></td><td id="X4Y1HN" class="hjorna"></td></tr></table></div>  
+    <div id="X5Y1" class="rute" onclick="trykkPaRute('X5Y1')"><table><tr><td id="X5Y1VO" class="hjorna"></td><td id="X5Y1O" class="opp"></td><td id="X5Y1HO" class="hjorna"></td></tr><tr><td id="X5Y1V" class="venstre"></td><td id="X5Y1M" class="midt"></td><td id="X5Y1H" class="hogre"></td></tr><tr><td id="X5Y1VN" class="hjorna"></td><td id="X5Y1N" class="ned"></td><td id="X5Y1HN" class="hjorna"></td></tr></table></div>  
+    <div id="X6Y1" class="rute" onclick="trykkPaRute('X6Y1')"><table><tr><td id="X6Y1VO" class="hjorna"></td><td id="X6Y1O" class="opp"></td><td id="X6Y1HO" class="hjorna"></td></tr><tr><td id="X6Y1V" class="venstre"></td><td id="X6Y1M" class="midt"></td><td id="X6Y1H" class="hogre"></td></tr><tr><td id="X6Y1VN" class="hjorna"></td><td id="X6Y1N" class="ned"></td><td id="X6Y1HN" class="hjorna"></td></tr></table></div>  
+    <div id="X7Y1" class="rute" onclick="trykkPaRute('X7Y1')"><table><tr><td id="X7Y1VO" class="hjorna"></td><td id="X7Y1O" class="opp"></td><td id="X7Y1HO" class="hjorna"></td></tr><tr><td id="X7Y1V" class="venstre"></td><td id="X7Y1M" class="midt"></td><td id="X7Y1H" class="hogre"></td></tr><tr><td id="X7Y1VN" class="hjorna"></td><td id="X7Y1N" class="ned"></td><td id="X7Y1HN" class="hjorna"></td></tr></table></div></div><div class="rekke">
+    <div id="X0Y2" class="rute" onclick="trykkPaRute('X0Y2')"><table><tr><td id="X0Y2VO" class="hjorna"></td><td id="X0Y2O" class="opp"></td><td id="X0Y2HO" class="hjorna"></td></tr><tr><td id="X0Y2V" class="venstre"></td><td id="X0Y2M" class="midt"></td><td id="X0Y2H" class="hogre"></td></tr><tr><td id="X0Y2VN" class="hjorna"></td><td id="X0Y2N" class="ned"></td><td id="X0Y2HN" class="hjorna"></td></tr></table></div>  
+    <div id="X1Y2" class="rute" onclick="trykkPaRute('X1Y2')"><table><tr><td id="X1Y2VO" class="hjorna"></td><td id="X1Y2O" class="opp"></td><td id="X1Y2HO" class="hjorna"></td></tr><tr><td id="X1Y2V" class="venstre"></td><td id="X1Y2M" class="midt"></td><td id="X1Y2H" class="hogre"></td></tr><tr><td id="X1Y2VN" class="hjorna"></td><td id="X1Y2N" class="ned"></td><td id="X1Y2HN" class="hjorna"></td></tr></table></div>  
+    <div id="X2Y2" class="rute" onclick="trykkPaRute('X2Y2')"><table><tr><td id="X2Y2VO" class="hjorna"></td><td id="X2Y2O" class="opp"></td><td id="X2Y2HO" class="hjorna"></td></tr><tr><td id="X2Y2V" class="venstre"></td><td id="X2Y2M" class="midt"></td><td id="X2Y2H" class="hogre"></td></tr><tr><td id="X2Y2VN" class="hjorna"></td><td id="X2Y2N" class="ned"></td><td id="X2Y2HN" class="hjorna"></td></tr></table></div>  
+    <div id="X3Y2" class="rute" onclick="trykkPaRute('X3Y2')"><table><tr><td id="X3Y2VO" class="hjorna"></td><td id="X3Y2O" class="opp"></td><td id="X3Y2HO" class="hjorna"></td></tr><tr><td id="X3Y2V" class="venstre"></td><td id="X3Y2M" class="midt"></td><td id="X3Y2H" class="hogre"></td></tr><tr><td id="X3Y2VN" class="hjorna"></td><td id="X3Y2N" class="ned"></td><td id="X3Y2HN" class="hjorna"></td></tr></table></div>  
+    <div id="X4Y2" class="rute" onclick="trykkPaRute('X4Y2')"><table><tr><td id="X4Y2VO" class="hjorna"></td><td id="X4Y2O" class="opp"></td><td id="X4Y2HO" class="hjorna"></td></tr><tr><td id="X4Y2V" class="venstre"></td><td id="X4Y2M" class="midt"></td><td id="X4Y2H" class="hogre"></td></tr><tr><td id="X4Y2VN" class="hjorna"></td><td id="X4Y2N" class="ned"></td><td id="X4Y2HN" class="hjorna"></td></tr></table></div>  
+    <div id="X5Y2" class="rute" onclick="trykkPaRute('X5Y2')"><table><tr><td id="X5Y2VO" class="hjorna"></td><td id="X5Y2O" class="opp"></td><td id="X5Y2HO" class="hjorna"></td></tr><tr><td id="X5Y2V" class="venstre"></td><td id="X5Y2M" class="midt"></td><td id="X5Y2H" class="hogre"></td></tr><tr><td id="X5Y2VN" class="hjorna"></td><td id="X5Y2N" class="ned"></td><td id="X5Y2HN" class="hjorna"></td></tr></table></div>  
+    <div id="X6Y2" class="rute" onclick="trykkPaRute('X6Y2')"><table><tr><td id="X6Y2VO" class="hjorna"></td><td id="X6Y2O" class="opp"></td><td id="X6Y2HO" class="hjorna"></td></tr><tr><td id="X6Y2V" class="venstre"></td><td id="X6Y2M" class="midt"></td><td id="X6Y2H" class="hogre"></td></tr><tr><td id="X6Y2VN" class="hjorna"></td><td id="X6Y2N" class="ned"></td><td id="X6Y2HN" class="hjorna"></td></tr></table></div>  
+    <div id="X7Y2" class="rute" onclick="trykkPaRute('X7Y2')"><table><tr><td id="X7Y2VO" class="hjorna"></td><td id="X7Y2O" class="opp"></td><td id="X7Y2HO" class="hjorna"></td></tr><tr><td id="X7Y2V" class="venstre"></td><td id="X7Y2M" class="midt"></td><td id="X7Y2H" class="hogre"></td></tr><tr><td id="X7Y2VN" class="hjorna"></td><td id="X7Y2N" class="ned"></td><td id="X7Y2HN" class="hjorna"></td></tr></table></div></div><div class="rekke">
+    <div id="X0Y3" class="rute" onclick="trykkPaRute('X0Y3')"><table><tr><td id="X0Y3VO" class="hjorna"></td><td id="X0Y3O" class="opp"></td><td id="X0Y3HO" class="hjorna"></td></tr><tr><td id="X0Y3V" class="venstre"></td><td id="X0Y3M" class="midt"></td><td id="X0Y3H" class="hogre"></td></tr><tr><td id="X0Y3VN" class="hjorna"></td><td id="X0Y3N" class="ned"></td><td id="X0Y3HN" class="hjorna"></td></tr></table></div>    
+    <div id="X1Y3" class="rute" onclick="trykkPaRute('X1Y3')"><table><tr><td id="X1Y3VO" class="hjorna"></td><td id="X1Y3O" class="opp"></td><td id="X1Y3HO" class="hjorna"></td></tr><tr><td id="X1Y3V" class="venstre"></td><td id="X1Y3M" class="midt"></td><td id="X1Y3H" class="hogre"></td></tr><tr><td id="X1Y3VN" class="hjorna"></td><td id="X1Y3N" class="ned"></td><td id="X1Y3HN" class="hjorna"></td></tr></table></div>    
+    <div id="X2Y3" class="rute" onclick="trykkPaRute('X2Y3')"><table><tr><td id="X2Y3VO" class="hjorna"></td><td id="X2Y3O" class="opp"></td><td id="X2Y3HO" class="hjorna"></td></tr><tr><td id="X2Y3V" class="venstre"></td><td id="X2Y3M" class="midt"></td><td id="X2Y3H" class="hogre"></td></tr><tr><td id="X2Y3VN" class="hjorna"></td><td id="X2Y3N" class="ned"></td><td id="X2Y3HN" class="hjorna"></td></tr></table></div>  
+    <div id="X3Y3" class="rute" onclick="trykkPaRute('X3Y3')"><table><tr><td id="X3Y3VO" class="hjorna"></td><td id="X3Y3O" class="opp"></td><td id="X3Y3HO" class="hjorna"></td></tr><tr><td id="X3Y3V" class="venstre"></td><td id="X3Y3M" class="midt"></td><td id="X3Y3H" class="hogre"></td></tr><tr><td id="X3Y3VN" class="hjorna"></td><td id="X3Y3N" class="ned"></td><td id="X3Y3HN" class="hjorna"></td></tr></table></div>  
+    <div id="X4Y3" class="rute" onclick="trykkPaRute('X4Y3')"><table><tr><td id="X4Y3VO" class="hjorna"></td><td id="X4Y3O" class="opp"></td><td id="X4Y3HO" class="hjorna"></td></tr><tr><td id="X4Y3V" class="venstre"></td><td id="X4Y3M" class="midt"></td><td id="X4Y3H" class="hogre"></td></tr><tr><td id="X4Y3VN" class="hjorna"></td><td id="X4Y3N" class="ned"></td><td id="X4Y3HN" class="hjorna"></td></tr></table></div>  
+    <div id="X5Y3" class="rute" onclick="trykkPaRute('X5Y3')"><table><tr><td id="X5Y3VO" class="hjorna"></td><td id="X5Y3O" class="opp"></td><td id="X5Y3HO" class="hjorna"></td></tr><tr><td id="X5Y3V" class="venstre"></td><td id="X5Y3M" class="midt"></td><td id="X5Y3H" class="hogre"></td></tr><tr><td id="X5Y3VN" class="hjorna"></td><td id="X5Y3N" class="ned"></td><td id="X5Y3HN" class="hjorna"></td></tr></table></div>  
+    <div id="X6Y3" class="rute" onclick="trykkPaRute('X6Y3')"><table><tr><td id="X6Y3VO" class="hjorna"></td><td id="X6Y3O" class="opp"></td><td id="X6Y3HO" class="hjorna"></td></tr><tr><td id="X6Y3V" class="venstre"></td><td id="X6Y3M" class="midt"></td><td id="X6Y3H" class="hogre"></td></tr><tr><td id="X6Y3VN" class="hjorna"></td><td id="X6Y3N" class="ned"></td><td id="X6Y3HN" class="hjorna"></td></tr></table></div>  
+    <div id="X7Y3" class="rute" onclick="trykkPaRute('X7Y3')"><table><tr><td id="X7Y3VO" class="hjorna"></td><td id="X7Y3O" class="opp"></td><td id="X7Y3HO" class="hjorna"></td></tr><tr><td id="X7Y3V" class="venstre"></td><td id="X7Y3M" class="midt"></td><td id="X7Y3H" class="hogre"></td></tr><tr><td id="X7Y3VN" class="hjorna"></td><td id="X7Y3N" class="ned"></td><td id="X7Y3HN" class="hjorna"></td></tr></table></div></div><div class="rekke">
+    <div id="X0Y4" class="rute" onclick="trykkPaRute('X0Y4')"><table><tr><td id="X0Y4VO" class="hjorna"></td><td id="X0Y4O" class="opp"></td><td id="X0Y4HO" class="hjorna"></td></tr><tr><td id="X0Y4V" class="venstre"></td><td id="X0Y4M" class="midt"></td><td id="X0Y4H" class="hogre"></td></tr><tr><td id="X0Y4VN" class="hjorna"></td><td id="X0Y4N" class="ned"></td><td id="X0Y4HN" class="hjorna"></td></tr></table></div>   
+    <div id="X1Y4" class="rute" onclick="trykkPaRute('X1Y4')"><table><tr><td id="X1Y4VO" class="hjorna"></td><td id="X1Y4O" class="opp"></td><td id="X1Y4HO" class="hjorna"></td></tr><tr><td id="X1Y4V" class="venstre"></td><td id="X1Y4M" class="midt"></td><td id="X1Y4H" class="hogre"></td></tr><tr><td id="X1Y4VN" class="hjorna"></td><td id="X1Y4N" class="ned"></td><td id="X1Y4HN" class="hjorna"></td></tr></table></div>   
+    <div id="X2Y4" class="rute" onclick="trykkPaRute('X2Y4')"><table><tr><td id="X2Y4VO" class="hjorna"></td><td id="X2Y4O" class="opp"></td><td id="X2Y4HO" class="hjorna"></td></tr><tr><td id="X2Y4V" class="venstre"></td><td id="X2Y4M" class="midt"></td><td id="X2Y4H" class="hogre"></td></tr><tr><td id="X2Y4VN" class="hjorna"></td><td id="X2Y4N" class="ned"></td><td id="X2Y4HN" class="hjorna"></td></tr></table></div>  
+    <div id="X3Y4" class="rute" onclick="trykkPaRute('X3Y4')"><table><tr><td id="X3Y4VO" class="hjorna"></td><td id="X3Y4O" class="opp"></td><td id="X3Y4HO" class="hjorna"></td></tr><tr><td id="X3Y4V" class="venstre"></td><td id="X3Y4M" class="midt"></td><td id="X3Y4H" class="hogre"></td></tr><tr><td id="X3Y4VN" class="hjorna"></td><td id="X3Y4N" class="ned"></td><td id="X3Y4HN" class="hjorna"></td></tr></table></div>  
+    <div id="X4Y4" class="rute" onclick="trykkPaRute('X4Y4')"><table><tr><td id="X4Y4VO" class="hjorna"></td><td id="X4Y4O" class="opp"></td><td id="X4Y4HO" class="hjorna"></td></tr><tr><td id="X4Y4V" class="venstre"></td><td id="X4Y4M" class="midt"></td><td id="X4Y4H" class="hogre"></td></tr><tr><td id="X4Y4VN" class="hjorna"></td><td id="X4Y4N" class="ned"></td><td id="X4Y4HN" class="hjorna"></td></tr></table></div>  
+    <div id="X5Y4" class="rute" onclick="trykkPaRute('X5Y4')"><table><tr><td id="X5Y4VO" class="hjorna"></td><td id="X5Y4O" class="opp"></td><td id="X5Y4HO" class="hjorna"></td></tr><tr><td id="X5Y4V" class="venstre"></td><td id="X5Y4M" class="midt"></td><td id="X5Y4H" class="hogre"></td></tr><tr><td id="X5Y4VN" class="hjorna"></td><td id="X5Y4N" class="ned"></td><td id="X5Y4HN" class="hjorna"></td></tr></table></div>  
+    <div id="X6Y4" class="rute" onclick="trykkPaRute('X6Y4')"><table><tr><td id="X6Y4VO" class="hjorna"></td><td id="X6Y4O" class="opp"></td><td id="X6Y4HO" class="hjorna"></td></tr><tr><td id="X6Y4V" class="venstre"></td><td id="X6Y4M" class="midt"></td><td id="X6Y4H" class="hogre"></td></tr><tr><td id="X6Y4VN" class="hjorna"></td><td id="X6Y4N" class="ned"></td><td id="X6Y4HN" class="hjorna"></td></tr></table></div>  
+    <div id="X7Y4" class="rute" onclick="trykkPaRute('X7Y4')"><table><tr><td id="X7Y4VO" class="hjorna"></td><td id="X7Y4O" class="opp"></td><td id="X7Y4HO" class="hjorna"></td></tr><tr><td id="X7Y4V" class="venstre"></td><td id="X7Y4M" class="midt"></td><td id="X7Y4H" class="hogre"></td></tr><tr><td id="X7Y4VN" class="hjorna"></td><td id="X7Y4N" class="ned"></td><td id="X7Y4HN" class="hjorna"></td></tr></table></div></div><div class="rekke">
+    <div id="X0Y5" class="rute" onclick="trykkPaRute('X0Y5')"><table><tr><td id="X0Y5VO" class="hjorna"></td><td id="X0Y5O" class="opp"></td><td id="X0Y5HO" class="hjorna"></td></tr><tr><td id="X0Y5V" class="venstre"></td><td id="X0Y5M" class="midt"></td><td id="X0Y5H" class="hogre"></td></tr><tr><td id="X0Y5VN" class="hjorna"></td><td id="X0Y5N" class="ned"></td><td id="X0Y5HN" class="hjorna"></td></tr></table></div>   
+    <div id="X1Y5" class="rute" onclick="trykkPaRute('X1Y5')"><table><tr><td id="X1Y5VO" class="hjorna"></td><td id="X1Y5O" class="opp"></td><td id="X1Y5HO" class="hjorna"></td></tr><tr><td id="X1Y5V" class="venstre"></td><td id="X1Y5M" class="midt"></td><td id="X1Y5H" class="hogre"></td></tr><tr><td id="X1Y5VN" class="hjorna"></td><td id="X1Y5N" class="ned"></td><td id="X1Y5HN" class="hjorna"></td></tr></table></div>    
+    <div id="X2Y5" class="rute" onclick="trykkPaRute('X2Y5')"><table><tr><td id="X2Y5VO" class="hjorna"></td><td id="X2Y5O" class="opp"></td><td id="X2Y5HO" class="hjorna"></td></tr><tr><td id="X2Y5V" class="venstre"></td><td id="X2Y5M" class="midt"></td><td id="X2Y5H" class="hogre"></td></tr><tr><td id="X2Y5VN" class="hjorna"></td><td id="X2Y5N" class="ned"></td><td id="X2Y5HN" class="hjorna"></td></tr></table></div>  
+    <div id="X3Y5" class="rute" onclick="trykkPaRute('X3Y5')"><table><tr><td id="X3Y5VO" class="hjorna"></td><td id="X3Y5O" class="opp"></td><td id="X3Y5HO" class="hjorna"></td></tr><tr><td id="X3Y5V" class="venstre"></td><td id="X3Y5M" class="midt"></td><td id="X3Y5H" class="hogre"></td></tr><tr><td id="X3Y5VN" class="hjorna"></td><td id="X3Y5N" class="ned"></td><td id="X3Y5HN" class="hjorna"></td></tr></table></div>  
+    <div id="X4Y5" class="rute" onclick="trykkPaRute('X4Y5')"><table><tr><td id="X4Y5VO" class="hjorna"></td><td id="X4Y5O" class="opp"></td><td id="X4Y5HO" class="hjorna"></td></tr><tr><td id="X4Y5V" class="venstre"></td><td id="X4Y5M" class="midt"></td><td id="X4Y5H" class="hogre"></td></tr><tr><td id="X4Y5VN" class="hjorna"></td><td id="X4Y5N" class="ned"></td><td id="X4Y5HN" class="hjorna"></td></tr></table></div>  
+    <div id="X5Y5" class="rute" onclick="trykkPaRute('X5Y5')"><table><tr><td id="X5Y5VO" class="hjorna"></td><td id="X5Y5O" class="opp"></td><td id="X5Y5HO" class="hjorna"></td></tr><tr><td id="X5Y5V" class="venstre"></td><td id="X5Y5M" class="midt"></td><td id="X5Y5H" class="hogre"></td></tr><tr><td id="X5Y5VN" class="hjorna"></td><td id="X5Y5N" class="ned"></td><td id="X5Y5HN" class="hjorna"></td></tr></table></div>  
+    <div id="X6Y5" class="rute" onclick="trykkPaRute('X6Y5')"><table><tr><td id="X6Y5VO" class="hjorna"></td><td id="X6Y5O" class="opp"></td><td id="X6Y5HO" class="hjorna"></td></tr><tr><td id="X6Y5V" class="venstre"></td><td id="X6Y5M" class="midt"></td><td id="X6Y5H" class="hogre"></td></tr><tr><td id="X6Y5VN" class="hjorna"></td><td id="X6Y5N" class="ned"></td><td id="X6Y5HN" class="hjorna"></td></tr></table></div>  
+    <div id="X7Y5" class="rute" onclick="trykkPaRute('X7Y5')"><table><tr><td id="X7Y5VO" class="hjorna"></td><td id="X7Y5O" class="opp"></td><td id="X7Y5HO" class="hjorna"></td></tr><tr><td id="X7Y5V" class="venstre"></td><td id="X7Y5M" class="midt"></td><td id="X7Y5H" class="hogre"></td></tr><tr><td id="X7Y5VN" class="hjorna"></td><td id="X7Y5N" class="ned"></td><td id="X7Y5HN" class="hjorna"></td></tr></table></div></div><div class="rekke">
+    <div id="X0Y6" class="rute" onclick="trykkPaRute('X0Y6')"><table><tr><td id="X0Y6VO" class="hjorna"></td><td id="X0Y6O" class="opp"></td><td id="X0Y6HO" class="hjorna"></td></tr><tr><td id="X0Y6V" class="venstre"></td><td id="X0Y6M" class="midt"></td><td id="X0Y6H" class="hogre"></td></tr><tr><td id="X0Y6VN" class="hjorna"></td><td id="X0Y6N" class="ned"></td><td id="X0Y6HN" class="hjorna"></td></tr></table></div>  
+    <div id="X1Y6" class="rute" onclick="trykkPaRute('X1Y6')"><table><tr><td id="X1Y6VO" class="hjorna"></td><td id="X1Y6O" class="opp"></td><td id="X1Y6HO" class="hjorna"></td></tr><tr><td id="X1Y6V" class="venstre"></td><td id="X1Y6M" class="midt"></td><td id="X1Y6H" class="hogre"></td></tr><tr><td id="X1Y6VN" class="hjorna"></td><td id="X1Y6N" class="ned"></td><td id="X1Y6HN" class="hjorna"></td></tr></table></div>  
+    <div id="X2Y6" class="rute" onclick="trykkPaRute('X2Y6')"><table><tr><td id="X2Y6VO" class="hjorna"></td><td id="X2Y6O" class="opp"></td><td id="X2Y6HO" class="hjorna"></td></tr><tr><td id="X2Y6V" class="venstre"></td><td id="X2Y6M" class="midt"></td><td id="X2Y6H" class="hogre"></td></tr><tr><td id="X2Y6VN" class="hjorna"></td><td id="X2Y6N" class="ned"></td><td id="X2Y6HN" class="hjorna"></td></tr></table></div>  
+    <div id="X3Y6" class="rute" onclick="trykkPaRute('X3Y6')"><table><tr><td id="X3Y6VO" class="hjorna"></td><td id="X3Y6O" class="opp"></td><td id="X3Y6HO" class="hjorna"></td></tr><tr><td id="X3Y6V" class="venstre"></td><td id="X3Y6M" class="midt"></td><td id="X3Y6H" class="hogre"></td></tr><tr><td id="X3Y6VN" class="hjorna"></td><td id="X3Y6N" class="ned"></td><td id="X3Y6HN" class="hjorna"></td></tr></table></div>  
+    <div id="X4Y6" class="rute" onclick="trykkPaRute('X4Y6')"><table><tr><td id="X4Y6VO" class="hjorna"></td><td id="X4Y6O" class="opp"></td><td id="X4Y6HO" class="hjorna"></td></tr><tr><td id="X4Y6V" class="venstre"></td><td id="X4Y6M" class="midt"></td><td id="X4Y6H" class="hogre"></td></tr><tr><td id="X4Y6VN" class="hjorna"></td><td id="X4Y6N" class="ned"></td><td id="X4Y6HN" class="hjorna"></td></tr></table></div>  
+    <div id="X5Y6" class="rute" onclick="trykkPaRute('X5Y6')"><table><tr><td id="X5Y6VO" class="hjorna"></td><td id="X5Y6O" class="opp"></td><td id="X5Y6HO" class="hjorna"></td></tr><tr><td id="X5Y6V" class="venstre"></td><td id="X5Y6M" class="midt"></td><td id="X5Y6H" class="hogre"></td></tr><tr><td id="X5Y6VN" class="hjorna"></td><td id="X5Y6N" class="ned"></td><td id="X5Y6HN" class="hjorna"></td></tr></table></div>  
+    <div id="X6Y6" class="rute" onclick="trykkPaRute('X6Y6')"><table><tr><td id="X6Y6VO" class="hjorna"></td><td id="X6Y6O" class="opp"></td><td id="X6Y6HO" class="hjorna"></td></tr><tr><td id="X6Y6V" class="venstre"></td><td id="X6Y6M" class="midt"></td><td id="X6Y6H" class="hogre"></td></tr><tr><td id="X6Y6VN" class="hjorna"></td><td id="X6Y6N" class="ned"></td><td id="X6Y6HN" class="hjorna"></td></tr></table></div>  
+    <div id="X7Y6" class="rute" onclick="trykkPaRute('X7Y6')"><table><tr><td id="X7Y6VO" class="hjorna"></td><td id="X7Y6O" class="opp"></td><td id="X7Y6HO" class="hjorna"></td></tr><tr><td id="X7Y6V" class="venstre"></td><td id="X7Y6M" class="midt"></td><td id="X7Y6H" class="hogre"></td></tr><tr><td id="X7Y6VN" class="hjorna"></td><td id="X7Y6N" class="ned"></td><td id="X7Y6HN" class="hjorna"></td></tr></table></div></div><div class="rekke">
+    <div id="X0Y7" class="rute" onclick="trykkPaRute('X0Y7')"><table><tr><td id="X0Y7VO" class="hjorna"></td><td id="X0Y7O" class="opp"></td><td id="X0Y7HO" class="hjorna"></td></tr><tr><td id="X0Y7V" class="venstre"></td><td id="X0Y7M" class="midt"></td><td id="X0Y7H" class="hogre"></td></tr><tr><td id="X0Y7VN" class="hjorna"></td><td id="X0Y7N" class="ned"></td><td id="X0Y7HN" class="hjorna"></td></tr></table></div>    
+    <div id="X1Y7" class="rute" onclick="trykkPaRute('X1Y7')"><table><tr><td id="X1Y7VO" class="hjorna"></td><td id="X1Y7O" class="opp"></td><td id="X1Y7HO" class="hjorna"></td></tr><tr><td id="X1Y7V" class="venstre"></td><td id="X1Y7M" class="midt"></td><td id="X1Y7H" class="hogre"></td></tr><tr><td id="X1Y7VN" class="hjorna"></td><td id="X1Y7N" class="ned"></td><td id="X1Y7HN" class="hjorna"></td></tr></table></div>    
+    <div id="X2Y7" class="rute" onclick="trykkPaRute('X2Y7')"><table><tr><td id="X2Y7VO" class="hjorna"></td><td id="X2Y7O" class="opp"></td><td id="X2Y7HO" class="hjorna"></td></tr><tr><td id="X2Y7V" class="venstre"></td><td id="X2Y7M" class="midt"></td><td id="X2Y7H" class="hogre"></td></tr><tr><td id="X2Y7VN" class="hjorna"></td><td id="X2Y7N" class="ned"></td><td id="X2Y7HN" class="hjorna"></td></tr></table></div>  
+    <div id="X3Y7" class="rute" onclick="trykkPaRute('X3Y7')"><table><tr><td id="X3Y7VO" class="hjorna"></td><td id="X3Y7O" class="opp"></td><td id="X3Y7HO" class="hjorna"></td></tr><tr><td id="X3Y7V" class="venstre"></td><td id="X3Y7M" class="midt"></td><td id="X3Y7H" class="hogre"></td></tr><tr><td id="X3Y7VN" class="hjorna"></td><td id="X3Y7N" class="ned"></td><td id="X3Y7HN" class="hjorna"></td></tr></table></div>  
+    <div id="X4Y7" class="rute" onclick="trykkPaRute('X4Y7')"><table><tr><td id="X4Y7VO" class="hjorna"></td><td id="X4Y7O" class="opp"></td><td id="X4Y7HO" class="hjorna"></td></tr><tr><td id="X4Y7V" class="venstre"></td><td id="X4Y7M" class="midt"></td><td id="X4Y7H" class="hogre"></td></tr><tr><td id="X4Y7VN" class="hjorna"></td><td id="X4Y7N" class="ned"></td><td id="X4Y7HN" class="hjorna"></td></tr></table></div>  
+    <div id="X5Y7" class="rute" onclick="trykkPaRute('X5Y7')"><table><tr><td id="X5Y7VO" class="hjorna"></td><td id="X5Y7O" class="opp"></td><td id="X5Y7HO" class="hjorna"></td></tr><tr><td id="X5Y7V" class="venstre"></td><td id="X5Y7M" class="midt"></td><td id="X5Y7H" class="hogre"></td></tr><tr><td id="X5Y7VN" class="hjorna"></td><td id="X5Y7N" class="ned"></td><td id="X5Y7HN" class="hjorna"></td></tr></table></div>  
+    <div id="X6Y7" class="rute" onclick="trykkPaRute('X6Y7')"><table><tr><td id="X6Y7VO" class="hjorna"></td><td id="X6Y7O" class="opp"></td><td id="X6Y7HO" class="hjorna"></td></tr><tr><td id="X6Y7V" class="venstre"></td><td id="X6Y7M" class="midt"></td><td id="X6Y7H" class="hogre"></td></tr><tr><td id="X6Y7VN" class="hjorna"></td><td id="X6Y7N" class="ned"></td><td id="X6Y7HN" class="hjorna"></td></tr></table></div>  
+    <div id="X7Y7" class="rute" onclick="trykkPaRute('X7Y7')"><table><tr><td id="X7Y7VO" class="hjorna"></td><td id="X7Y7O" class="opp"></td><td id="X7Y7HO" class="hjorna"></td></tr><tr><td id="X7Y7V" class="venstre"></td><td id="X7Y7M" class="midt"></td><td id="X7Y7H" class="hogre"></td></tr><tr><td id="X7Y7VN" class="hjorna"></td><td id="X7Y7N" class="ned"></td><td id="X7Y7HN" class="hjorna"></td></tr></table></div>
     </div>
-    <div class="rekke">
-    <div id="X0Y1" class="rute" onclick="trykkPaRute('X0Y1')"></div>  
-    <div id="X1Y1" class="rute" onclick="trykkPaRute('X1Y1')"></div>  
-    <div id="X2Y1" class="rute" onclick="trykkPaRute('X2Y1')"></div>  
-    <div id="X3Y1" class="rute" onclick="trykkPaRute('X3Y1')"></div>  
-    <div id="X4Y1" class="rute" onclick="trykkPaRute('X4Y1')"></div>  
-    <div id="X5Y1" class="rute" onclick="trykkPaRute('X5Y1')"></div>  
-    <div id="X6Y1" class="rute" onclick="trykkPaRute('X6Y1')"></div>  
-    <div id="X7Y1" class="rute" onclick="trykkPaRute('X7Y1')"></div>
-    </div>
-    <div class="rekke">
-    <div id="X0Y2" class="rute" onclick="trykkPaRute('X0Y2')"></div>  
-    <div id="X1Y2" class="rute" onclick="trykkPaRute('X1Y2')"></div>  
-    <div id="X2Y2" class="rute" onclick="trykkPaRute('X2Y2')"></div>  
-    <div id="X3Y2" class="rute" onclick="trykkPaRute('X3Y2')"></div>  
-    <div id="X4Y2" class="rute" onclick="trykkPaRute('X4Y2')"></div>  
-    <div id="X5Y2" class="rute" onclick="trykkPaRute('X5Y2')"></div>  
-    <div id="X6Y2" class="rute" onclick="trykkPaRute('X6Y2')"></div>  
-    <div id="X7Y2" class="rute" onclick="trykkPaRute('X7Y2')"></div>
-    </div>
-    <div class="rekke">
-    <div id="X0Y3" class="rute" onclick="trykkPaRute('X0Y3')"></div>    
-    <div id="X1Y3" class="rute" onclick="trykkPaRute('X1Y3')"></div>    
-    <div id="X2Y3" class="rute" onclick="trykkPaRute('X2Y3')"></div>  
-    <div id="X3Y3" class="rute" onclick="trykkPaRute('X3Y3')"></div>  
-    <div id="X4Y3" class="rute" onclick="trykkPaRute('X4Y3')"></div>  
-    <div id="X5Y3" class="rute" onclick="trykkPaRute('X5Y3')"></div>  
-    <div id="X6Y3" class="rute" onclick="trykkPaRute('X6Y3')"></div>  
-    <div id="X7Y3" class="rute" onclick="trykkPaRute('X7Y3')"></div>
-    </div>
-    <div class="rekke">
-    <div id="X0Y4" class="rute" onclick="trykkPaRute('X0Y4')"></div>   
-    <div id="X1Y4" class="rute" onclick="trykkPaRute('X1Y4')"></div>   
-    <div id="X2Y4" class="rute" onclick="trykkPaRute('X2Y4')"></div>  
-    <div id="X3Y4" class="rute" onclick="trykkPaRute('X3Y4')"></div>  
-    <div id="X4Y4" class="rute" onclick="trykkPaRute('X4Y4')"></div>  
-    <div id="X5Y4" class="rute" onclick="trykkPaRute('X5Y4')"></div>  
-    <div id="X6Y4" class="rute" onclick="trykkPaRute('X6Y4')"></div>  
-    <div id="X7Y4" class="rute" onclick="trykkPaRute('X7Y4')"></div>
-    </div>
-    <div class="rekke">
-    <div id="X0Y5" class="rute" onclick="trykkPaRute('X0Y5')"></div>   
-    <div id="X1Y5" class="rute" onclick="trykkPaRute('X1Y5')"></div>    
-    <div id="X2Y5" class="rute" onclick="trykkPaRute('X2Y5')"></div>  
-    <div id="X3Y5" class="rute" onclick="trykkPaRute('X3Y5')"></div>  
-    <div id="X4Y5" class="rute" onclick="trykkPaRute('X4Y5')"></div>  
-    <div id="X5Y5" class="rute" onclick="trykkPaRute('X5Y5')"></div>  
-    <div id="X6Y5" class="rute" onclick="trykkPaRute('X6Y5')"></div>  
-    <div id="X7Y5" class="rute" onclick="trykkPaRute('X7Y5')"></div>
-    </div>
-    <div class="rekke">
-    <div id="X0Y6" class="rute" onclick="trykkPaRute('X0Y6')"></div>  
-    <div id="X1Y6" class="rute" onclick="trykkPaRute('X1Y6')"></div>  
-    <div id="X2Y6" class="rute" onclick="trykkPaRute('X2Y6')"></div>  
-    <div id="X3Y6" class="rute" onclick="trykkPaRute('X3Y6')"></div>  
-    <div id="X4Y6" class="rute" onclick="trykkPaRute('X4Y6')"></div>  
-    <div id="X5Y6" class="rute" onclick="trykkPaRute('X5Y6')"></div>  
-    <div id="X6Y6" class="rute" onclick="trykkPaRute('X6Y6')"></div>  
-    <div id="X7Y6" class="rute" onclick="trykkPaRute('X7Y6')"></div>
-    </div>
-    <div class="rekke">
-    <div id="X0Y7" class="rute" onclick="trykkPaRute('X0Y7')"></div>    
-    <div id="X1Y7" class="rute" onclick="trykkPaRute('X1Y7')"></div>    
-    <div id="X2Y7" class="rute" onclick="trykkPaRute('X2Y7')"></div>  
-    <div id="X3Y7" class="rute" onclick="trykkPaRute('X3Y7')"></div>  
-    <div id="X4Y7" class="rute" onclick="trykkPaRute('X4Y7')"></div>  
-    <div id="X5Y7" class="rute" onclick="trykkPaRute('X5Y7')"></div>  
-    <div id="X6Y7" class="rute" onclick="trykkPaRute('X6Y7')"></div>  
-    <div id="X7Y7" class="rute" onclick="trykkPaRute('X7Y7')"></div>
-    </div>
-    <div id="melding" class="infolinje braMelding" onclick="nesteNiva()" ><p id="meldingstekst">Melding</p></div>
-    <div id="feilMelding" class="infolinje feilMelding" onclick="nesteNiva()" ><p >Tom for pengar, prøv igjen.</p></div>
+    <div id="melding" class="braMelding" onclick="meldingKlikk()" ><p id="meldingstekst">Melding</p></div>
 
   </div>
   <script defer src="appen/hoved.js"></script>
