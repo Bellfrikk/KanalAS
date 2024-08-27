@@ -174,10 +174,20 @@ function oppdaterRute(nr:string,nyType:RuteTypar|null,nyNiva:number|null,nyVatn:
  
 function vinn(){
   spelarNiva++;
-  if(spelarNiva > maksNiva){
-    visMelding('Du har klart alle','lukk')
-    spelarNiva=0;
-  }else{
-  visMelding('Du klarte det! Prøv neste','nesteBrett')
-  }
+  oppdaterMelding('Du klarte det! Prøv neste nivå.')
+}
+
+function visFeilmelding(){
+  document.getElementById('feilMelding')!.style.display = 'flex';
+}
+function fjernInfomelding(){
+  document.getElementById('melding')!.style.display = 'none';
+  document.getElementById('feilmelding')!.style.display = 'none';
+
+}
+
+function nesteNiva(){
+  if(spelarNiva > maksNiva){return;}
+  fjernInfomelding()
+  lagBrett()
 }
