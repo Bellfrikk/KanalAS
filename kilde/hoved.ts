@@ -174,7 +174,7 @@ function oppdaterRute(nr:string,nyType:RuteTypar|null,nyNiva:number|null,nyVatn:
  
 function vinn(){
   spelarNiva++;
-  oppdaterMelding('Du klarte det! Prøv neste nivå.')
+  visMelding('Du klarte det! Prøv neste nivå.','nesteBrett')
 }
 
 function visFeilmelding(){
