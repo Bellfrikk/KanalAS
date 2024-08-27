@@ -67,7 +67,8 @@
   .land0 { background-color: rgb(21, 238, 21);}
   .land2 { background-color: rgb(157, 255, 0);}
   .fjell0, .fjell2 { background-color: grey;}
-  .sluse1 { background-color: rgb(200, 219, 214);}
+  .sluse1 { background-color: rgb(158, 164, 162);}
+  .sluse1 { background-color: rgb(202, 207, 206);}
   .sluse { border:solid #999 1px;}
 
   
@@ -85,17 +86,17 @@
   .opp, .ned{
     height:3vmin;
     width:4vmin;
-    background-color: #54b5ffd5;
+    background-color:rgb(50, 152, 43);
   }
   .hogre, .venstre{
     height:4vmin;
     width:3vmin;
-    background-color: #54b5ffd5;
+    background-color: rgb(50, 152, 43);
   }
   .midt{
     height:4vmin;
     width:4vmin;
-    background-color: #54b5ffd5;
+    background-color: rgb(50, 152, 43);
   }
     </style>
 </head>
@@ -168,11 +169,15 @@
     <div id="X6Y7" class="rute" onclick="trykkPaRute('X6Y7')"><table><tr><td id="X6Y7VO" class="hjorna"></td><td id="X6Y7O" class="opp"></td><td id="X6Y7HO" class="hjorna"></td></tr><tr><td id="X6Y7V" class="venstre"></td><td id="X6Y7M" class="midt"></td><td id="X6Y7H" class="hogre"></td></tr><tr><td id="X6Y7VN" class="hjorna"></td><td id="X6Y7N" class="ned"></td><td id="X6Y7HN" class="hjorna"></td></tr></table></div>  
     <div id="X7Y7" class="rute" onclick="trykkPaRute('X7Y7')"><table><tr><td id="X7Y7VO" class="hjorna"></td><td id="X7Y7O" class="opp"></td><td id="X7Y7HO" class="hjorna"></td></tr><tr><td id="X7Y7V" class="venstre"></td><td id="X7Y7M" class="midt"></td><td id="X7Y7H" class="hogre"></td></tr><tr><td id="X7Y7VN" class="hjorna"></td><td id="X7Y7N" class="ned"></td><td id="X7Y7HN" class="hjorna"></td></tr></table></div>
     </div>
-    <div id="melding" class="braMelding" onclick="meldingKlikk()" ><p id="meldingstekst">Melding</p></div>
+    <div id="melding" class="braMelding" onclick="meldingKlikk('nesteBrett')" ><p id="meldingstekst">Melding</p></div>
 
   </div>
+  <script defer src="appen/brett.js"></script>
   <script defer src="appen/hoved.js"></script>
   <script defer src="appen/class.js"></script>
+  <script defer src="appen/melding.js"></script>
+  <script defer src="appen/verktoy.js"></script>
+
   <script>
     window.onload = () => {
       oppstart();
