@@ -14,7 +14,7 @@ function oppstart() {
 function lagBrett() {
     for (let x = 0; x < 8; x++) {
         for (let y = 0; y < 8; y++) {
-            let id = 'X' + x + 'Y' + y;
+            let id = ('X' + x + 'Y' + y);
             ruteListe.push(id);
             ruter[id] = new Rute(x, y, brettData[spelarNiva][id][0], brettData[spelarNiva][id][1]);
             oppdaterRute(id, null, null, null);
@@ -190,11 +190,19 @@ function oppdaterRute(nr, nyType, nyNiva, nyVatn) {
 }
 function vinn() {
     spelarNiva++;
+    visMelding('Du klarte det! Prøv neste nivå.', 'nesteBrett');
+}
+function visFeilmelding() {
+    document.getElementById('feilMelding').style.display = 'flex';
+}
+function fjernInfomelding() {
+    document.getElementById('melding').style.display = 'none';
+    document.getElementById('feilmelding').style.display = 'none';
+}
+function nesteNiva() {
     if (spelarNiva > maksNiva) {
-        visMelding('Du har klart alle', 'lukk');
-        spelarNiva = 0;
+        return;
     }
-    else {
-        visMelding('Du klarte det! Prøv neste', 'nesteBrett');
-    }
+    fjernInfomelding();
+    lagBrett();
 }

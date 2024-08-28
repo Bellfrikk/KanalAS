@@ -1,7 +1,7 @@
 const maksNiva = 3;
 
 
-let spelarNiva:brettNummer = 0;
+let spelarNiva:BrettNivaer = 0;
 let peng:number = 0;
 let ruter:Ruter = {kant:{  x:9, y:9, niva:0, type:'kant', vatn:false}};
 let ruteListe:string[] = [];
@@ -17,12 +17,13 @@ visMelding(brettData[spelarNiva].melding,'nesteBrett')
 function lagBrett(){
   for(let x=0;x<8;x++){
     for(let y=0;y<8;y++){
-      let id:string = 'X'+x+'Y'+y
+      let id:ruteID = ('X'+x+'Y'+y) as ruteID;
       ruteListe.push(id);
-      ruter[id] = new Rute(x, y, brettData[spelarNiva][id as keyof brettDataNiva][0], brettData[spelarNiva][id as keyof brettDataNiva][1]);
+      ruter[id] = new Rute(x, y, brettData[spelarNiva][id][0], brettData[spelarNiva][id][1]);
       oppdaterRute(id,null,null,null)
     }
   }
+
   peng = brettData[spelarNiva].startePeng;
   tegnTopp()
 }

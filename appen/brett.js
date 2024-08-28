@@ -1,6 +1,7 @@
 "use strict";
 const brettData = {
-    0: { startePeng: 7, melding: 'Lag ein kanal mellom dei røde punkta.',
+    0: {
+        startePeng: 7, melding: 'Lag ein kanal mellom dei røde punkta.',
         X0Y0: [0, 'start'], X1Y0: [0, 'vatn'], X2Y0: [0, 'land'], X3Y0: [0, 'land'], X4Y0: [0, 'land'], X5Y0: [0, 'land'], X6Y0: [0, 'land'], X7Y0: [0, 'vatn'],
         X0Y1: [0, 'vatn'], X1Y1: [0, 'vatn'], X2Y1: [0, 'land'], X3Y1: [0, 'land'], X4Y1: [0, 'land'], X5Y1: [0, 'land'], X6Y1: [0, 'vatn'], X7Y1: [0, 'vatn'],
         X0Y2: [0, 'vatn'], X1Y2: [0, 'vatn'], X2Y2: [0, 'land'], X3Y2: [0, 'land'], X4Y2: [0, 'land'], X5Y2: [0, 'land'], X6Y2: [0, 'vatn'], X7Y2: [0, 'vatn'],
