@@ -162,7 +162,7 @@ function oppdaterRute(nr:string,nyType:RuteTypar|null,nyNiva:number|null,nyVatn:
     naboSider.forEach(side => {
       if(side.naboSide !== 'kant' && (ruter[side.nabo].type === 'kanal' || ruter[side.nabo].type === 'vatn') ){
         document.getElementById(side.denneSide)!.className = 'sluse ' + tortEllerVatn + ruter[nr].niva;
-        document.getElementById(side.naboSide)!.className = tortEllerVatn + ruter[side.nabo].niva;
+        document.getElementById(side.naboSide)!.className = ruter[nr].vatn ? 'vatn' : 'kanal' + ruter[side.nabo].niva;
       }
     });
   }else{
