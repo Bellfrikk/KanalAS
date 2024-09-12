@@ -2,25 +2,25 @@
 function finnNaboRuter(nr) {
     let naboer = [];
     if (ruter[nr].y > 0) {
-        naboer.push('X' + (ruter[nr].x) + 'Y' + (ruter[nr].y - 1));
+        naboer.push(('X' + (ruter[nr].x) + 'Y' + (ruter[nr].y - 1)));
     }
     else {
         naboer.push('kant');
     }
     if (ruter[nr].x < 7) {
-        naboer.push('X' + (ruter[nr].x + 1) + 'Y' + (ruter[nr].y));
+        naboer.push(('X' + (ruter[nr].x + 1) + 'Y' + (ruter[nr].y)));
     }
     else {
         naboer.push('kant');
     }
     if (ruter[nr].y < 7) {
-        naboer.push('X' + (ruter[nr].x) + 'Y' + (ruter[nr].y + 1));
+        naboer.push(('X' + (ruter[nr].x) + 'Y' + (ruter[nr].y + 1)));
     }
     else {
         naboer.push('kant');
     }
     if (ruter[nr].x > 0) {
-        naboer.push('X' + (ruter[nr].x - 1) + 'Y' + (ruter[nr].y));
+        naboer.push(('X' + (ruter[nr].x - 1) + 'Y' + (ruter[nr].y)));
     }
     else {
         naboer.push('kant');

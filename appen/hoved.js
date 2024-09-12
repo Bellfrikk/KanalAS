@@ -2,15 +2,33 @@
 const maksNiva = 3;
 let spelarNiva = 0;
 let peng = 0;
-let ruter = { kant: { x: 9, y: 9, niva: 0, type: 'kant', vatn: false } };
+let ruter = { kant: { x: 9, y: 9, niva: 0, type: 'kant', vatn: false, reiseLengde: 0, luftLinjeFram: 0, totNR: 0, forelderRute: null } };
 let ruteListe = [];
 let sjekk = 0;
 let meldingKlikkHandling = 'nesteBrett';
+const startRute = 'X0Y0';
+const stoppRute = 'X7Y7';
+////const strRute = document.getElementById('X0Y0').getBoundingClientRect();
+////const strSkip = document.getElementById('skip').getBoundingClientRect();
+//let skipet = {
+//    retning: 90,
+//    x: (strRute.left + strRute.right) / 2,
+//    y: (strRute.top + strRute.bottom) / 2,
+//    bredde: strSkip.width,
+//    hoyde: strSkip.height
+//};
 function oppstart() {
     // lagreKjeks(spelarNiva, peng)
     //  sjekkEtterKjeks()
+    //const pos = document.getElementById('X0Y0')!.getBoundingClientRect().right;
     visMelding(brettData[spelarNiva].melding, 'nesteBrett');
 }
+//function teinSkip() {
+//    const skip = document.getElementById('skip');
+//    skip.style.transform = "rotate(" + skipet.retning + "deg)";
+//    skip.style.left = skipet.x + skipet.bredde / 2 + 'px';
+//    skip.style.top = skipet.y + skipet.hoyde / 2 + 'px';
+//}
 function lagBrett() {
     for (let x = 0; x < 8; x++) {
         for (let y = 0; y < 8; y++) {
@@ -50,7 +68,7 @@ function trykkPaRute(nr) {
         else if (lagSluse(nr, naboTypar, [naboRuter[3], naboRuter[0], naboRuter[1], naboRuter[2]])) { }
     }
     fyllKanal(nr);
-    sjekkOmFerdig(nr);
+    sjekkOmFerdig();
 }
 function lagSluse(nr, naboTypar, naboar) {
     if (ruter[naboar[0]].niva === ruter[nr].niva - 2 &&
@@ -122,31 +140,6 @@ function fyllKanal(nr) {
         }
     }
 }
-function sjekkOmFerdig(nr) {
-    let ruterTilSjekk = ['X1Y0', 'X0Y1'];
-    let sjekkaRuter = ['X0Y0'];
-    sjekkRute();
-    function sjekkRute() {
-        const nr = ruterTilSjekk[0];
-        if (ruter[nr].type === 'stopp') {
-            vinn();
-            return;
-        }
-        else if (ruter[nr].vatn) {
-            const naboer = finnNaboRuter(nr);
-            naboer.forEach(nabo => {
-                if (!sjekkaRuter.includes(nabo)) {
-                    ruterTilSjekk.push(nabo);
-                }
-            });
-        }
-        sjekkaRuter.push(nr);
-        ruterTilSjekk.shift();
-        if (ruterTilSjekk.length > 0) {
-            sjekkRute();
-        }
-    }
-}
 function oppdaterRute(nr, nyType, nyNiva, nyVatn) {
     if (nr === 'kant') {
         return;
@@ -173,14 +166,15 @@ function oppdaterRute(nr, nyType, nyNiva, nyVatn) {
         });
     }
     else if (ruter[nr].type === 'sluse') {
-        document.getElementById(nr + 'M').className = 'sluse ' + tortEllerVatn + ruter[nr].niva;
+        document.getElementById(nr + 'M').className = 'midt sluse ' + tortEllerVatn + ruter[nr].niva;
         naboSider.forEach(side => {
             if (side.naboSide !== 'kant' && (ruter[side.nabo].type === 'kanal' || ruter[side.nabo].type === 'vatn')) {
-                document.getElementById(side.denneSide).className = 'sluse ' + tortEllerVatn + ruter[nr].niva;
-                document.getElementById(side.naboSide).className = ruter[nr].vatn ? 'vatn' : 'kanal' + ruter[side.nabo].niva;
+                document.getElementById(side.denneSide).classList.add = 'sluse ' + tortEllerVatn + ruter[nr].niva;
+                document.getElementById(side.naboSide).classList.add = ruter[nr].vatn ? 'vatn' : 'kanal' + ruter[side.nabo].niva;
             }
         });
     }
+
     else {
         const sider = ['VO', 'O', 'HO', 'V', 'M', 'H', 'VN', 'N', 'HN'];
         sider.forEach(side => {
