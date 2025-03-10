@@ -1,4 +1,4 @@
-const maksNiva = 3;
+const maksNiva = 4;
 
 
 let spelarNiva = 0;
