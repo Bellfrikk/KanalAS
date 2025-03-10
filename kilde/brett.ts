@@ -39,5 +39,15 @@ const brettData:BrettData = {
     X0Y5: [0,'vatn'], X1Y5: [0,'land'], X2Y5: [2,'fjell'],X3Y5: [2,'vatn'], X4Y5: [2,'land'], X5Y5: [2,'land'], X6Y5: [0,'land'], X7Y5: [0,'vatn'],
     X0Y6: [0,'vatn'], X1Y6: [0,'land'], X2Y6: [2,'fjell'],X3Y6: [2,'land'], X4Y6: [2,'land'], X5Y6: [2,'land'], X6Y6: [0,'land'], X7Y6: [0,'vatn'],
     X0Y7: [0,'vatn'], X1Y7: [0,'land'], X2Y7: [2,'fjell'],X3Y7: [2,'land'], X4Y7: [2,'land'], X5Y7: [2,'land'], X6Y7: [0,'land'], X7Y7: [0,'stopp']
+  },
+  4: { startePeng: 15, melding:'Nytt: Sluser kan koble høg og låg kanal.',kant:[0,'kant'],
+    X0Y0: [0,'start'],X1Y0: [0,'vatn'], X2Y0: [1,'land'], X3Y0: [1,'land'], X4Y0: [1,'land'], X5Y0: [1,'fjell'], X6Y0: [1,'fjell'], X7Y0: [1,'land'],
+    X0Y1: [0,'vatn'], X1Y1: [0,'vatn'], X2Y1: [1,'land'], X3Y1: [1,'land'], X4Y1: [1,'land'], X5Y1: [1,'land'], X6Y1: [1,'fjell'], X7Y1: [1,'land'],
+    X0Y2: [0,'land'], X1Y2: [0,'land'], X2Y2: [1,'vatn'], X3Y2: [1,'vatn'], X4Y2: [1,'vatn'], X5Y2: [1,'land'], X6Y2: [1,'land'], X7Y2: [1,'land'],
+    X0Y3: [0,'land'], X1Y3: [0,'land'], X2Y3: [1,'vatn'],X3Y3: [1,'vatn'], X4Y3: [1,'vatn'], X5Y3: [1,'land'], X6Y3: [1,'land'], X7Y3: [1,'land'],
+    X0Y4: [0,'land'], X1Y4: [0,'land'], X2Y4: [1,'vatn'],X3Y4: [1,'vatn'], X4Y4: [1,'vatn'], X5Y4: [1,'land'], X6Y4: [0,'land'], X7Y4: [0,'land'],
+    X0Y5: [0,'land'], X1Y5: [0,'land'], X2Y5: [1,'vatn'],X3Y5: [1,'vatn'], X4Y5: [1,'vatn'], X5Y5: [1,'land'], X6Y5: [0,'land'], X7Y5: [0,'land'],
+    X0Y6: [0,'land'], X1Y6: [0,'land'], X2Y6: [1,'fjell'],X3Y6: [1,'land'], X4Y6: [1,'land'], X5Y6: [1,'land'], X6Y6: [0,'vatn'], X7Y6: [0,'vatn'],
+    X0Y7: [0,'land'], X1Y7: [0,'land'], X2Y7: [1,'fjell'],X3Y7: [1,'land'], X4Y7: [1,'land'], X5Y7: [1,'land'], X6Y7: [0,'vatn'], X7Y7: [0,'stopp']
   }
 };
